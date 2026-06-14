@@ -91,9 +91,32 @@ export type BarrelLogEntry = {
   category: BarrelLogCategory;
   distillery: string;
   partner?: string;
+  series?: string;
+  image?: string;
   logoDomain?: string;
   pickDate?: string;
   releaseDate?: string;
+  bottleCount?: number;
+  proof?: string;
+  age?: string;
+  mashbill?: string;
+  serialNumber?: string;
+  cooperage?: string;
+  finishingStaves?: string;
+  notes?: string;
+};
+
+export type ClientProjectType = "Store" | "Club" | "Private" | "Other";
+
+export type ClientProjectEntry = {
+  id: string;
+  client: string;
+  collectionName?: string;
+  distillery?: string;
+  logoDomain?: string;
+  pickDate?: string;
+  releaseDate?: string;
+  type?: ClientProjectType;
   bottleCount?: number;
   proof?: string;
   notes?: string;

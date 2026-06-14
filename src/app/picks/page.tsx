@@ -1,8 +1,14 @@
-import { BarrelLogCard } from "@/components/barrel-log-card";
+import { BarrelLogTabs } from "@/components/barrel-log-tabs";
 import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/reveal";
 import { SectionHeading } from "@/components/section-heading";
-import { collabPickLogEntries, myPickLogEntries, sortBarrelLogEntries } from "@/data/barrel-log";
+import {
+  clientProjectEntries,
+  collabPickLogEntries,
+  myPickLogEntries,
+  sortBarrelLogEntries,
+  sortClientProjectEntries,
+} from "@/data/barrel-log";
 import { createMetadata } from "@/lib/site";
 
 export const metadata = createMetadata({
@@ -14,6 +20,7 @@ export const metadata = createMetadata({
 export default async function PicksPage() {
   const sortedMyPicks = sortBarrelLogEntries(myPickLogEntries);
   const sortedCollabs = sortBarrelLogEntries(collabPickLogEntries);
+  const sortedClientProjects = sortClientProjectEntries(clientProjectEntries);
 
   return (
     <>
@@ -26,35 +33,16 @@ export default async function PicksPage() {
       <section className="shell section">
         <Reveal>
           <SectionHeading
-            eyebrow="Tiffany's Picks"
-            title="The barrel log"
-            description="A running look at the barrels Tiffany has chosen, from early favorites to the releases still on the horizon."
+            eyebrow="The Log"
+            title="Every barrel, one place"
+            description="My picks, collaborations, and client projects — all in one searchable log."
           />
         </Reveal>
-        <div className="barrel-log-grid">
-          {sortedMyPicks.map((entry, index) => (
-            <Reveal key={entry.id} delay={index * 0.035}>
-              <BarrelLogCard entry={entry} />
-            </Reveal>
-          ))}
-        </div>
-      </section>
-
-      <section className="shell section">
-        <Reveal>
-          <SectionHeading
-            eyebrow="Collaborations"
-            title="Collaborations"
-            description="Shared selections, special projects, and one-off picks that brought Tiffany's palate into the room with other whiskey people."
-          />
-        </Reveal>
-        <div className="barrel-log-grid">
-          {sortedCollabs.map((entry, index) => (
-            <Reveal key={entry.id} delay={index * 0.04}>
-              <BarrelLogCard entry={entry} />
-            </Reveal>
-          ))}
-        </div>
+        <BarrelLogTabs
+          myPicks={sortedMyPicks}
+          collabs={sortedCollabs}
+          clientProjects={sortedClientProjects}
+        />
       </section>
     </>
   );

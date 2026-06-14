@@ -1,4 +1,4 @@
-import type { BarrelLogEntry } from "@/lib/types";
+import type { BarrelLogEntry, ClientProjectEntry } from "@/lib/types";
 
 export const myPickLogEntries: BarrelLogEntry[] = [
   {
@@ -32,6 +32,7 @@ export const myPickLogEntries: BarrelLogEntry[] = [
     releaseDate: "2024-11",
     bottleCount: 162,
     proof: "116.4 proof",
+    mashbill: "6 grain",
     notes: "Tiffany 1",
   },
   {
@@ -43,27 +44,34 @@ export const myPickLogEntries: BarrelLogEntry[] = [
     releaseDate: "2025-11",
     bottleCount: 156,
     proof: "141 proof",
+    mashbill: "86% white corn, 6% heritage prairie rye, 8% malted barley",
     notes: "Barrel 152",
   },
   {
     id: "alvin-langston-2025-11",
     category: "my-pick",
     distillery: "Alvin Langston",
+    series: "The Vault Collection",
     logoDomain: "contrarycow.com",
     pickDate: "2025-11",
     releaseDate: "2026-03",
     bottleCount: 78,
     proof: "140 proof",
-    notes: "3 weeks from being 21 years old",
+    mashbill: "99% corn, 1% malted barley",
+    notes: "3 weeks from being 21 years old — American Light Whiskey",
   },
   {
     id: "alvin-langston-2026-02",
     category: "my-pick",
     distillery: "Alvin Langston",
+    series: "The Vault Collection",
     logoDomain: "contrarycow.com",
     pickDate: "2026-02",
-    releaseDate: "2026-05",
-    notes: "8.5 year old, 51% rye",
+    releaseDate: "2026-06",
+    bottleCount: 186,
+    proof: "110 proof",
+    mashbill: "51% rye, 45% corn, 4% malted barley",
+    notes: "8.5 year old",
   },
   {
     id: "broad-branch-distillery-2025-05",
@@ -74,6 +82,7 @@ export const myPickLogEntries: BarrelLogEntry[] = [
     releaseDate: "2025-08",
     bottleCount: 312,
     proof: "139 proof",
+    mashbill: "86% white corn, 6% heritage prairie rye, 8% malted barley",
     notes: "2 barrel blend",
   },
   {
@@ -92,7 +101,10 @@ export const myPickLogEntries: BarrelLogEntry[] = [
     distillery: "Dettling",
     logoDomain: "dettling1867.com",
     pickDate: "2026-05",
-    releaseDate: "2026-08",
+    releaseDate: "2026-06",
+    bottleCount: 144,
+    proof: "115.6 proof",
+    mashbill: "6 grain",
   },
   {
     id: "dettling-2025-01",
@@ -102,6 +114,7 @@ export const myPickLogEntries: BarrelLogEntry[] = [
     pickDate: "2024-09",
     releaseDate: "2025-01",
     proof: "113.9 proof",
+    mashbill: "6 grain",
     notes: "Tiffany 2 - Barrel 496 - Spiral Cut",
   },
 ];
@@ -127,13 +140,13 @@ export const collabPickLogEntries: BarrelLogEntry[] = [
     releaseDate: "2024-10",
     bottleCount: 276,
     proof: "94 proof",
-    notes: "The Bonnie's of Clyde's — All Women Pick",
+    notes: "All female pick - the Bonnie's of Clyde's",
   },
   {
     id: "high-wire-distilling-2025-10",
     category: "collab",
     distillery: "High Wire Distilling",
-    partner: "Soda Boyz",
+    partner: "SodaBoyz",
     logoDomain: "highwiredistilling.com",
     pickDate: "2025-10",
     releaseDate: "2025-12",
@@ -165,9 +178,14 @@ export const collabPickLogEntries: BarrelLogEntry[] = [
     id: "asw-2026-05",
     category: "collab",
     distillery: "ASW",
-    partner: "Sodaboyz",
+    partner: "SodaBoyz",
     logoDomain: "aswdistillery.com",
     pickDate: "2026-05",
+    proof: "119.6 proof",
+    age: "7 years 6 months",
+    serialNumber: "812",
+    cooperage: "Gainesville Cooperage",
+    finishingStaves: "20 finishing staves",
   },
   {
     id: "broad-branch-distillery-2024-06",
@@ -227,3 +245,19 @@ export const upcomingLogEntries = sortBarrelLogEntries(
 export const pastLogEntries = sortBarrelLogEntries(
   barrelLogEntries.filter((entry) => entryDateValue(entry) < "2026-05"),
 );
+
+export const clientProjectEntries: ClientProjectEntry[] = [
+  {
+    id: "tigers-give-back",
+    client: "Tigers Give Back",
+    collectionName: "The Poppie Collection",
+  },
+];
+
+export function sortClientProjectEntries(entries: ClientProjectEntry[]) {
+  return [...entries].sort((a, b) => {
+    const aVal = a.releaseDate ?? a.pickDate ?? "0000-00";
+    const bVal = b.releaseDate ?? b.pickDate ?? "0000-00";
+    return bVal.localeCompare(aVal);
+  });
+}

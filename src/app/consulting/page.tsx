@@ -1,9 +1,17 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ConsultingForm } from "@/components/consulting-form";
 import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/reveal";
 import { SectionHeading } from "@/components/section-heading";
 import { createMetadata } from "@/lib/site";
+
+const brandPartners = [
+  { name: "High Wire Distilling", domain: "highwiredistilling.com" },
+  { name: "Broad Branch Distillery", domain: "broadbranchdistillery.com" },
+  { name: "ASW Distillery", domain: "aswdistillery.com" },
+  { name: "Driftless Glen", domain: "driftlessglen.com" },
+];
 
 const consultingServices = [
   {
@@ -68,6 +76,31 @@ export default function ConsultingPage() {
             the people building the brand.
           </p>
         </Reveal>
+      </section>
+
+      <section className="shell section consulting-partners">
+        <Reveal>
+          <SectionHeading
+            eyebrow="Current Partners"
+            title="Brands Tiffany is working with"
+          />
+        </Reveal>
+        <div className="consulting-partners__grid">
+          {brandPartners.map((brand, index) => (
+            <Reveal key={brand.domain} delay={index * 0.05}>
+              <div className="consulting-partners__item">
+                <Image
+                  src={`https://www.google.com/s2/favicons?domain=${brand.domain}&sz=128`}
+                  alt={`${brand.name} logo`}
+                  width={64}
+                  height={64}
+                  className="consulting-partners__logo"
+                />
+                <p>{brand.name}</p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
       </section>
 
       <section className="shell section">

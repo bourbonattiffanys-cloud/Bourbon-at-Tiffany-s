@@ -4,7 +4,7 @@ export const services: Service[] = [
   {
     slug: "bourbon-101",
     name: "Bourbon 101",
-    price: "Starting at $75 per person",
+    price: "Starting at $85 per person",
     summary: "A welcoming introduction to bourbon history, mash bills, and the major names shaping the category.",
     highlights: [
       "Perfect for first-time bourbon drinkers and social groups",
@@ -15,7 +15,7 @@ export const services: Service[] = [
   {
     slug: "bourbon-201",
     name: "Bourbon 201",
-    price: "Starting at $75 per person",
+    price: "Starting at $100 per person",
     summary: "A deeper tasting for enthusiasts ready to talk small batch, limited releases, and what actually changes from barrel to barrel.",
     highlights: [
       "Great for hobbyists growing into collectors",
@@ -26,7 +26,7 @@ export const services: Service[] = [
   {
     slug: "bourbon-301",
     name: "Bourbon 301",
-    price: "Starting at $100 per person",
+    price: "Starting at $125 per person",
     summary: "An advanced session built around nuance, comparative tasting, and the details that separate memorable pours from merely rare ones.",
     highlights: [
       "Designed for serious whiskey lovers and private groups",
