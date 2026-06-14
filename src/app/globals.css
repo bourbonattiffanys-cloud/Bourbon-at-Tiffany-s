@@ -694,11 +694,13 @@ span {
   display: block;
   block-size: clamp(18rem, 24vw, 23rem);
   min-height: 18rem;
+  background: var(--surface);
 }
 
 .pick-card__image img {
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
+  padding: 0.75rem;
 }
 
 .pick-card__body {
@@ -1288,6 +1290,36 @@ a:focus-visible {
 .detail-rail {
   display: grid;
   gap: 1rem;
+}
+
+.pick-store-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem 0 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.pick-store-list li {
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--fg);
+}
+
+.pick-store-list span {
+  color: var(--muted);
+}
+
+.pick-store-online {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.pick-store-online a {
+  color: var(--accent);
+  text-decoration: underline;
 }
 
 .pick-detail-section {

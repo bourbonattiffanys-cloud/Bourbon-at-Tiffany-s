@@ -53,6 +53,11 @@ export type SocialLink = {
   href: string;
 };
 
+export type PickStore = {
+  name: string;
+  location?: string;
+};
+
 export type BarrelPick = {
   slug: string;
   title: string;
@@ -63,6 +68,9 @@ export type BarrelPick = {
   sellerUrl?: string;
   storeName?: string;
   storeLocation?: string;
+  stores?: PickStore[];
+  onlineSellerName?: string;
+  onlineSellerUrl?: string;
   releaseDate?: string;
   bottleCount?: number;
   proof?: string;
@@ -78,6 +86,7 @@ export type BarrelPick = {
   heroImage: string;
   gallery?: string[];
   ctaMode: PickCtaMode;
+  inviteOnly?: boolean;
   memberEarlyAccess?: boolean;
   allocationNotes?: string;
   purchaseLimit?: string;

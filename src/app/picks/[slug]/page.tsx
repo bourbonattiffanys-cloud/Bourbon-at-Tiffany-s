@@ -122,19 +122,51 @@ export default async function PickDetailPage({
             <section className="section section--tight pick-detail-section">
               <p className="eyebrow">Tiffany&apos;s Commentary</p>
               <blockquote className="quote-card quote-card--wide">
-                <p>{pick.tiffanyNotes}</p>
+                {pick.tiffanyNotes.split("\n\n").map((para, i) => (
+                  <p key={i}>{para}</p>
+                ))}
               </blockquote>
             </section>
           ) : null}
         </div>
         <aside className="detail-rail">
           <div className="editorial-panel">
-            <p className="eyebrow">Access</p>
+            <p className="eyebrow">Where to Find It</p>
             <h2>How this pick is handled</h2>
-            <p>
-              Register interest early, then return to the page once Tiffany updates where the bottle is
-              available. The site supports partner links, store-only releases, and sold-out status updates.
-            </p>
+            {pick.inviteOnly ? (
+              <p>
+                This is a private release shared directly with people in Tiffany&apos;s circle. If you
+                received word about this bottle, you already know how to reach her. If you didn&apos;t
+                and you&apos;re curious, the best place to start is{" "}
+                <a href="/contact">a conversation</a>.
+              </p>
+            ) : pick.stores?.length ? (
+              <>
+                <p>Available at these South Carolina locations:</p>
+                <ul className="pick-store-list">
+                  {pick.stores.map((store) => (
+                    <li key={store.name}>
+                      <strong>{store.name}</strong>
+                      {store.location ? <span> — {store.location}</span> : null}
+                    </li>
+                  ))}
+                </ul>
+                {pick.onlineSellerName && pick.onlineSellerUrl ? (
+                  <p className="pick-store-online">
+                    Outside SC?{" "}
+                    <a href={pick.onlineSellerUrl} target="_blank" rel="noopener noreferrer">
+                      Order online through {pick.onlineSellerName}
+                    </a>
+                    .
+                  </p>
+                ) : null}
+              </>
+            ) : (
+              <p>
+                Register interest early, then return to the page once Tiffany updates where the bottle is
+                available.
+              </p>
+            )}
           </div>
           {pick.ctaMode === "interest" ? <PickInterestForm pickSlug={pick.slug} pickTitle={pick.title} /> : null}
         </aside>

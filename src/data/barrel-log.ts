@@ -93,7 +93,8 @@ export const myPickLogEntries: BarrelLogEntry[] = [
     pickDate: "2026-04",
     releaseDate: "2026-08",
     proof: "139 proof",
-    notes: "Rye barrel",
+    mashbill: "100% heritage prairie rye",
+    notes: "Barrel 219",
   },
   {
     id: "dettling-2026-05",
@@ -105,6 +106,7 @@ export const myPickLogEntries: BarrelLogEntry[] = [
     bottleCount: 144,
     proof: "115.6 proof",
     mashbill: "6 grain",
+    notes: "Tiffany 3 — All female pick team",
   },
   {
     id: "dettling-2025-01",
