@@ -2,21 +2,15 @@ import type { Testimonial } from "@/lib/types";
 
 export const testimonials: Testimonial[] = [
   {
-    name: "Private Tasting Host",
-    role: "Columbia, South Carolina",
+    name: "Matt Norris",
+    role: "Repeat customer — Father's Day tasting",
     quote:
-      "Tiffany made everyone feel welcome, whether they were bourbon-curious or already collecting. The room left knowing more and wanting another pour.",
+      "Had the best time doing a tasting! Tiffany knows everything there is to know about bourbon! It was an education just hearing her explain the nuance and detail about what we were trying. I didn't know much coming in and now feel like I know quite a bit! Very highly recommend this unique one of a kind experience!",
   },
   {
-    name: "Retail Partner",
-    role: "Whiskey Community Collaborator",
+    name: "Charles Whitesides",
+    role: "Repeat customer — Father's Day gift card",
     quote:
-      "Her palate is clear, her notes are honest, and she brings real energy to every barrel pick she leads.",
-  },
-  {
-    name: "Bourbon Club Organizer",
-    role: "Group Event Client",
-    quote:
-      "The tasting felt polished without feeling stiff. It was educational, memorable, and personal in all the right ways.",
+      "Tiffany is great! She is very knowledgeable and enjoys educating and discussing bourbon and whiskey. If you like bourbon you should schedule a tasting with her.",
   },
 ];

@@ -6,7 +6,6 @@ import { SectionHeading } from "@/components/section-heading";
 import { featuredPicks } from "@/data/barrel-picks";
 import { services } from "@/data/services";
 import { testimonials } from "@/data/testimonials";
-import { faqs } from "@/data/site-content";
 import { createMetadata, siteConfig } from "@/lib/site";
 
 export const metadata = createMetadata({
@@ -21,22 +20,11 @@ export default function HomePage() {
       <section className="hero">
         <div className="shell hero__content hero__content--split">
           <Reveal className="hero__panel">
-            <div className="hero__brand">
-              <Image
-                src="/assets/logo.png"
-                alt="Bourbon at Tiffany's logo"
-                width={120}
-                height={120}
-                priority
-              />
-              <div>
-                <p className="eyebrow">Bourbon Education, On Your Time</p>
-              </div>
-            </div>
-            <h1>Tiffany&apos;s palate. Your next pour.</h1>
+            <p className="eyebrow">Life&apos;s too short to drink average bourbon.</p>
+            <h1>Taste matters. Find yours.</h1>
             <p className="hero__lede">
-              Thoughtful tastings, documented barrel picks, and clean release guidance for people who care
-              what is in the glass.
+              Hand-curated tastings, a living barrel log, and a filter for all the noise. No recycled
+              reviews — just real guidance for people who want to know what&apos;s actually worth pouring.
             </p>
             <div className="hero__actions">
               <Link className="button" href="/contact">
@@ -61,20 +49,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="shell section section--tight proof-band">
-        <div>
-          <p className="eyebrow">At a glance</p>
-          <h2>Education, barrel picks, and clean buyer guidance in one place.</h2>
-        </div>
-        <ul className="proof-band__list">
-          <li>Stave &amp; Thief Society Certified Bourbon Steward</li>
-          <li>Serving bourbon lovers from Chapin and across South Carolina</li>
-          <li>Private tastings, custom events, and pick-release updates</li>
-          <li>Barrel-pick pages with specs, notes, and buying details</li>
-        </ul>
-      </section>
-
-      <section className="shell section">
+<section className="shell section">
         <Reveal>
           <SectionHeading
             eyebrow="Featured Picks"
@@ -99,14 +74,18 @@ export default function HomePage() {
       <section className="shell section split-showcase split-showcase--framed">
         <Reveal className="split-showcase__story">
           <p className="eyebrow">About Tiffany</p>
-          <h2>A warm guide for drinkers who want clarity, not noise.</h2>
+          <h2>Every sip has a story. I&apos;m here to tell it.</h2>
           <p>
-            Tiffany built Bourbon at Tiffany&apos;s to make whiskey legible and memorable. Her approach is
-            equal parts palate, hospitality, and honest translation for people who want to know why a bottle
-            matters.
+            Bourbon at Tiffany&apos;s was built around the untold stories. A tasting isn&apos;t just about
+            what&apos;s in the glass — it&apos;s about the farmer who grew the grain, the timber farmer who
+            supplied the oak, the cooper who built the barrel, the distiller who made the cut, the team
+            rolling barrels into the rickhouse, the bottling line, the logistics crew getting it to the
+            shelf, and everyone in between whose work made that sip possible. Most people will never travel
+            to every distillery across the country. I go so you don&apos;t have to, and I bring the whole
+            story back with me.
           </p>
           <Link className="text-link" href="/about">
-            Read Tiffany&apos;s story
+            Read my story
           </Link>
         </Reveal>
         <Reveal className="split-showcase__detail" delay={0.1}>
@@ -176,27 +155,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="shell section faq-block">
-        <Reveal>
-          <SectionHeading
-            eyebrow="Questions"
-            title="Clear expectations before release day"
-            description="These answers keep the pick flow straightforward: register interest, watch for release updates, then buy through the listed partner or store."
-          />
-        </Reveal>
-        <div className="faq-list">
-          {faqs.map((item, index) => (
-            <Reveal key={item.question} delay={index * 0.04}>
-              <article className="faq-item">
-                <h3>{item.question}</h3>
-                <p>{item.answer}</p>
-              </article>
-            </Reveal>
-          ))}
-        </div>
-      </section>
-
-      <section className="shell section final-cta">
+<section className="shell section final-cta">
         <Reveal>
           <p className="eyebrow">Ready to work together?</p>
           <h2>Book a tasting or join the next barrel-pick list.</h2>

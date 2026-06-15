@@ -9,6 +9,7 @@ import {
   sortBarrelLogEntries,
   sortClientProjectEntries,
 } from "@/data/barrel-log";
+import { faqs } from "@/data/site-content";
 import { createMetadata } from "@/lib/site";
 
 export const metadata = createMetadata({
@@ -67,6 +68,25 @@ export default async function PicksPage() {
           collabs={sortedCollabs}
           clientProjects={sortedClientProjects}
         />
+      </section>
+      <section className="shell section faq-block">
+        <Reveal>
+          <SectionHeading
+            eyebrow="Questions"
+            title="How picks work"
+            description="Register interest early, then check back once the release details are confirmed."
+          />
+        </Reveal>
+        <div className="faq-list">
+          {faqs.map((item, index) => (
+            <Reveal key={item.question} delay={index * 0.04}>
+              <article className="faq-item">
+                <h3>{item.question}</h3>
+                <p>{item.answer}</p>
+              </article>
+            </Reveal>
+          ))}
+        </div>
       </section>
     </>
   );
