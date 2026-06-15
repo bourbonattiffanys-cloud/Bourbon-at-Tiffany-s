@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { formatBarrelLogDate, isUpcomingBarrelLogRelease } from "@/data/barrel-log";
 import type { BarrelLogEntry } from "@/lib/types";
 
@@ -24,6 +25,7 @@ export function BarrelLogCard({ entry }: { entry: BarrelLogEntry }) {
 
   return (
     <article className={isUpcoming ? "barrel-log-card barrel-log-card--upcoming" : "barrel-log-card"}>
+      <Link className="barrel-log-card__link" href={`/log/${entry.id}`} aria-label={`View details for ${entry.distillery}`} />
       <div className="barrel-log-card__topline">
         {entry.logoDomain ? (
           <Image

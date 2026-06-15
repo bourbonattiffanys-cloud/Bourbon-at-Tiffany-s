@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { formatBarrelLogDate } from "@/data/barrel-log";
 import type { ClientProjectEntry } from "@/lib/types";
 
@@ -14,8 +15,32 @@ function Spec({ label, value }: { label: string; value?: string | number }) {
 export function ClientProjectCard({ entry }: { entry: ClientProjectEntry }) {
   return (
     <article className="barrel-log-card">
+      <Link className="barrel-log-card__link" href={`/log/${entry.id}`} aria-label={`View details for ${entry.client}`} />
       <div className="barrel-log-card__topline">
-        {entry.logoDomain ? (
+        {entry.logoImages ? (
+          <div className="barrel-log-card__logos">
+            {entry.logoImages.map((src) => (
+              <Image
+                key={src}
+                src={src}
+                alt={`${entry.client} logo`}
+                width={44}
+                height={44}
+                className="barrel-log-card__logo"
+                style={{ objectFit: "contain" }}
+              />
+            ))}
+          </div>
+        ) : entry.logoImage ? (
+          <Image
+            src={entry.logoImage}
+            alt={`${entry.client} logo`}
+            width={44}
+            height={44}
+            className="barrel-log-card__logo"
+            style={{ objectFit: "contain" }}
+          />
+        ) : entry.logoDomain ? (
           <Image
             src={`https://www.google.com/s2/favicons?domain=${entry.logoDomain}&sz=128`}
             alt={`${entry.client} logo`}

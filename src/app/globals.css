@@ -644,6 +644,19 @@ span {
   gap: 1.05rem;
   padding: 1.25rem;
   min-height: 100%;
+  position: relative;
+}
+
+.barrel-log-card:has(.barrel-log-card__link):hover {
+  box-shadow: 0 0 0 2px var(--accent), var(--shadow-soft);
+  cursor: pointer;
+}
+
+.barrel-log-card__link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
 }
 
 .barrel-log-card--upcoming {
@@ -659,6 +672,11 @@ span {
   justify-content: space-between;
   color: var(--muted);
   font-size: 0.86rem;
+}
+
+.barrel-log-card__logos {
+  display: flex;
+  gap: 0.4rem;
 }
 
 .barrel-log-card__logo {
@@ -1343,6 +1361,52 @@ a:focus-visible {
 
 .form-message--error {
   color: var(--error);
+}
+
+.log-detail-hero {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  padding: 3rem 0 2rem;
+}
+
+.log-detail-back {
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+.log-detail-hero__img {
+  width: 260px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0.5rem;
+}
+
+.log-detail-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.log-detail-notes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.spec-card--wide {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 640px) {
+  .log-detail-hero {
+    grid-template-columns: 1fr;
+  }
+  .log-detail-hero__img {
+    width: 180px;
+  }
 }
 
 .pick-detail-hero {

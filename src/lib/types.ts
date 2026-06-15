@@ -124,6 +124,8 @@ export type ClientProjectEntry = {
   distillery?: string;
   image?: string;
   logoDomain?: string;
+  logoImage?: string;
+  logoImages?: string[];
   pickDate?: string;
   releaseDate?: string;
   type?: ClientProjectType;
