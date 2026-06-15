@@ -420,6 +420,49 @@ span {
   grid-auto-rows: 1fr;
 }
 
+.log-totals-strip {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.log-totals {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.log-totals__stat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.15rem;
+}
+
+.log-totals__value {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--ink);
+  line-height: 1;
+}
+
+.log-totals__label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+@media (max-width: 640px) {
+  .log-totals-strip {
+    justify-content: flex-start;
+  }
+  .log-totals__stat {
+    align-items: flex-start;
+  }
+}
+
 .barrel-log-tabs {
   display: grid;
   gap: 1.75rem;
@@ -744,6 +787,63 @@ span {
 .split-copy {
   display: grid;
   gap: 1rem;
+}
+
+.about-story {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 4rem;
+  align-items: start;
+}
+
+.about-story__body h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.about-story__body h2:first-child {
+  margin-top: 0;
+}
+
+.about-story__body p {
+  color: var(--muted);
+  max-width: 62ch;
+  margin-bottom: 1rem;
+}
+
+.about-story__rail {
+  position: sticky;
+  top: 6rem;
+}
+
+.about-bottles {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin: 1.5rem 0;
+}
+
+.about-bottle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.about-bottle__img {
+  width: auto;
+  max-height: 220px;
+  height: auto;
+  border-radius: var(--radius-sm);
+  object-fit: contain;
+}
+
+.about-bottle p {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--muted);
+  text-align: center;
+  margin: 0;
 }
 
 .pick-card__topline {
@@ -1084,6 +1184,11 @@ span {
   text-transform: uppercase;
 }
 
+.status-pill--nonprofit {
+  background: #d4edda;
+  color: #1a5c2a;
+}
+
 .split-showcase,
 .split-copy,
 .contact-layout,
@@ -1361,6 +1466,7 @@ a:focus-visible {
 
   .proof-band,
   .section-heading,
+  .about-story,
   .consulting-intro,
   .split-showcase,
   .split-copy,

@@ -24,7 +24,11 @@ export function ClientProjectCard({ entry }: { entry: ClientProjectEntry }) {
             className="barrel-log-card__logo"
           />
         ) : null}
-        {entry.type ? <span className="status-pill">{entry.type}</span> : null}
+        {entry.type ? (
+        <span className={`status-pill${entry.type === "Non-Profit" ? " status-pill--nonprofit" : ""}`}>
+          {entry.type}
+        </span>
+      ) : null}
       </div>
       <div className="barrel-log-card__heading">
         <h3>{entry.client}</h3>
@@ -32,10 +36,21 @@ export function ClientProjectCard({ entry }: { entry: ClientProjectEntry }) {
         {entry.distillery ? <p>{entry.distillery}</p> : null}
       </div>
       <dl className="barrel-log-card__specs">
-        <Spec label="Pick Date" value={formatBarrelLogDate(entry.pickDate)} />
         <Spec label="Release" value={formatBarrelLogDate(entry.releaseDate)} />
         <Spec label="Bottles" value={entry.bottleCount} />
         <Spec label="Proof" value={entry.proof} />
+        {entry.age ? <Spec label="Age" value={entry.age} /> : null}
+        {entry.finish ? <Spec label="Finish" value={entry.finish} /> : null}
+        {entry.mashbill ? (
+          <div className="barrel-log-card__spec--wide">
+            <dt>Mashbill</dt>
+            <dd className="barrel-log-card__mashbill">
+              {entry.mashbill.split(",").map((grain) => (
+                <span key={grain.trim()}>{grain.trim()}</span>
+              ))}
+            </dd>
+          </div>
+        ) : null}
       </dl>
       {entry.notes ? <p className="barrel-log-card__notes">{entry.notes}</p> : null}
     </article>

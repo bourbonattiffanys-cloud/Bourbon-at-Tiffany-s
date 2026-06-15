@@ -22,6 +22,15 @@ export default async function PicksPage() {
   const sortedCollabs = sortBarrelLogEntries(collabPickLogEntries);
   const sortedClientProjects = sortClientProjectEntries(clientProjectEntries);
 
+  const totalBarrels =
+    myPickLogEntries.length + collabPickLogEntries.length + clientProjectEntries.length;
+
+  const totalBottles = [
+    ...myPickLogEntries,
+    ...collabPickLogEntries,
+    ...clientProjectEntries,
+  ].reduce((sum, e) => sum + (e.bottleCount ?? 0), 0);
+
   return (
     <>
       <PageHero
@@ -29,6 +38,21 @@ export default async function PicksPage() {
         title="Barrel picks, past and present."
         description="Revisit favorite releases, follow what is coming next, and see the collaborations that have shaped the Bourbon at Tiffany's story."
       />
+
+      <div className="shell log-totals-strip">
+        <Reveal>
+          <div className="log-totals">
+            <div className="log-totals__stat">
+              <span className="log-totals__value">{totalBarrels}</span>
+              <span className="log-totals__label">Total Barrels</span>
+            </div>
+            <div className="log-totals__stat">
+              <span className="log-totals__value">{totalBottles.toLocaleString()}</span>
+              <span className="log-totals__label">Total Bottles</span>
+            </div>
+          </div>
+        </Reveal>
+      </div>
 
       <section className="shell section">
         <Reveal>

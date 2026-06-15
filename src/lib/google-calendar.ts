@@ -41,8 +41,15 @@ export function extractFirstUrl(value?: string) {
     return undefined;
   }
 
-  const match = stripHtml(value).match(/https?:\/\/[^\s<>"')]+/i);
-  return match?.[0]?.replace(/[.,;:!?]+$/, "");
+  const text = stripHtml(value);
+  const matches = text.matchAll(/https?:\/\/[^\s<>"')]+/gi);
+  for (const match of matches) {
+    const url = match[0].replace(/[.,;:!?]+$/, "");
+    if (!url.includes("meet.google.com") && !url.includes("google.com/calendar")) {
+      return url;
+    }
+  }
+  return undefined;
 }
 
 export function normalizeCalendarDescription(value?: string) {

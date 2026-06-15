@@ -47,7 +47,11 @@ export const barrelPicks: BarrelPick[] = [
     proof: "139 proof",
     mashbill: "100% heritage prairie rye",
     barrelType: "Single barrel rye — Barrel 219",
-    tastingNotes: ["Baked apple"],
+    tastingNotes: [
+      "Nose: Granny Smith apple, tobacco, brown sugar, maple",
+      "Palate: Nutmeg, confectioners sugar, vanilla",
+      "Finish: Long, with an effervescent spice that tingles on the palate",
+    ],
     stores: [
       { name: "Clyde's Spirits" },
       { name: "C&M Beverages" },

@@ -6,7 +6,7 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://bourbonattiffanys.com",
   description:
     "Private bourbon tastings, barrel-pick coverage, and whiskey education rooted in Tiffany's palate, hospitality, and South Carolina whiskey community.",
-  email: "BourbonAtTiffanys@gmail.com",
+  email: "tiffany@bourbonattiffanys.com",
   phone: "(812) 764-5412",
   phoneHref: "tel:8127645412",
   location: "Chapin, South Carolina",

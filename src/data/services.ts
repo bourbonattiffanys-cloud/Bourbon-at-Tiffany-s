@@ -4,7 +4,7 @@ export const services: Service[] = [
   {
     slug: "bourbon-101",
     name: "Bourbon 101",
-    price: "Starting at $85 per person",
+    price: "Starting at $75 per person",
     summary: "A welcoming introduction to bourbon history, mash bills, and the major names shaping the category.",
     highlights: [
       "Perfect for first-time bourbon drinkers and social groups",

@@ -79,7 +79,7 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="Featured Picks"
             title="Where the bottle story lives"
-            description="Past selections, live links, and interest-first upcoming releases all run through one clear system."
+            description="Upcoming releases."
             action={
               <Link className="text-link" href="/picks">
                 Browse all picks

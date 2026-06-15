@@ -24,17 +24,6 @@ export function BarrelLogCard({ entry }: { entry: BarrelLogEntry }) {
 
   return (
     <article className={isUpcoming ? "barrel-log-card barrel-log-card--upcoming" : "barrel-log-card"}>
-      {entry.image ? (
-        <div className="barrel-log-card__image">
-          <Image
-            src={entry.image}
-            alt={`${entry.distillery} bottle`}
-            width={600}
-            height={800}
-            className="barrel-log-card__img"
-          />
-        </div>
-      ) : null}
       <div className="barrel-log-card__topline">
         {entry.logoDomain ? (
           <Image

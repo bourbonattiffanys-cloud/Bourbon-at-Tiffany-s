@@ -115,19 +115,23 @@ export type BarrelLogEntry = {
   notes?: string;
 };
 
-export type ClientProjectType = "Store" | "Club" | "Private" | "Other";
+export type ClientProjectType = "Store" | "Non-Profit" | "Club" | "Private" | "Other";
 
 export type ClientProjectEntry = {
   id: string;
   client: string;
   collectionName?: string;
   distillery?: string;
+  image?: string;
   logoDomain?: string;
   pickDate?: string;
   releaseDate?: string;
   type?: ClientProjectType;
   bottleCount?: number;
   proof?: string;
+  age?: string;
+  mashbill?: string;
+  finish?: string;
   notes?: string;
 };
 
