@@ -27,21 +27,38 @@ export function BarrelLogCard({ entry }: { entry: BarrelLogEntry }) {
     <article className={isUpcoming ? "barrel-log-card barrel-log-card--upcoming" : "barrel-log-card"}>
       <Link className="barrel-log-card__link" href={`/log/${entry.id}`} aria-label={`View details for ${entry.distillery}`} />
       <div className="barrel-log-card__topline">
-        {entry.logoDomain ? (
-          <Image
-            src={`https://www.google.com/s2/favicons?domain=${entry.logoDomain}&sz=128`}
-            alt={`${entry.distillery} logo`}
-            width={44}
-            height={44}
-            className="barrel-log-card__logo"
-          />
-        ) : null}
+        <div className="barrel-log-card__topline-left">
+          {entry.logoImage ? (
+            <Image
+              src={entry.logoImage}
+              alt={`${entry.partner ?? entry.distillery} logo`}
+              width={44}
+              height={44}
+              className="barrel-log-card__logo"
+              style={{ objectFit: "contain" }}
+            />
+          ) : entry.logoDomain ? (
+            <Image
+              src={`https://www.google.com/s2/favicons?domain=${entry.logoDomain}&sz=128`}
+              alt={`${entry.distillery} logo`}
+              width={44}
+              height={44}
+              className="barrel-log-card__logo"
+            />
+          ) : null}
+        </div>
         {isUpcoming ? <span className="status-pill">Upcoming</span> : null}
+        {entry.availability ? (
+          <span className={`status-pill status-pill--${entry.availability}`}>
+            {entry.availability === "sold-out" ? "Sold Out" : entry.availability === "upcoming" ? "Upcoming" : entry.availability === "private" ? "Private" : "Available"}
+          </span>
+        ) : null}
       </div>
       <div className="barrel-log-card__heading">
         <h3>{entry.distillery}</h3>
         {entry.series ? <p className="barrel-log-card__series">{entry.series}</p> : null}
         {entry.partner ? <p>{entry.partner}</p> : null}
+        {entry.whiskyType ? <p className="barrel-log-card__whisky-type">{entry.whiskyType}</p> : null}
       </div>
       <dl className="barrel-log-card__specs">
         <Spec label="Pick Date" value={formatBarrelLogDate(entry.pickDate)} />

@@ -56,6 +56,7 @@ export type SocialLink = {
 export type PickStore = {
   name: string;
   location?: string;
+  logoImage?: string;
 };
 
 export type BarrelPick = {
@@ -95,6 +96,8 @@ export type BarrelPick = {
 
 export type BarrelLogCategory = "my-pick" | "collab";
 
+export type BottleAvailability = "available" | "sold-out" | "upcoming" | "private";
+
 export type BarrelLogEntry = {
   id: string;
   category: BarrelLogCategory;
@@ -103,16 +106,20 @@ export type BarrelLogEntry = {
   series?: string;
   image?: string;
   logoDomain?: string;
+  logoImage?: string;
   pickDate?: string;
   releaseDate?: string;
   bottleCount?: number;
   proof?: string;
   age?: string;
+  whiskyType?: string;
   mashbill?: string;
   serialNumber?: string;
   cooperage?: string;
   finishingStaves?: string;
   notes?: string;
+  stores?: PickStore[];
+  availability?: BottleAvailability;
 };
 
 export type ClientProjectType = "Store" | "Non-Profit" | "Club" | "Private" | "Other";
@@ -132,9 +139,12 @@ export type ClientProjectEntry = {
   bottleCount?: number;
   proof?: string;
   age?: string;
+  whiskyType?: string;
   mashbill?: string;
   finish?: string;
   notes?: string;
+  stores?: PickStore[];
+  availability?: BottleAvailability;
 };
 
 export type ScheduleKind = "pick" | "event";

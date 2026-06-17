@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+
 import { notFound } from "next/navigation";
 import { myPickLogEntries, collabPickLogEntries, formatBarrelLogDate } from "@/data/barrel-log";
 import { clientProjectEntries } from "@/data/barrel-log";
@@ -111,6 +112,7 @@ export default async function LogDetailPage({
               <Spec label="Bottles" value={entry.bottleCount} />
               <Spec label="Proof" value={entry.proof} />
               <Spec label="Age" value={entry.age} />
+              <Spec label="Style" value={entry.whiskyType} />
               <Spec label="Serial No." value={entry.serialNumber} />
               <Spec label="Cooperage" value={entry.cooperage} />
               <Spec label="Finishing" value={entry.finishingStaves} />
@@ -127,6 +129,7 @@ export default async function LogDetailPage({
               <Spec label="Bottles" value={entry.bottleCount} />
               <Spec label="Proof" value={entry.proof} />
               <Spec label="Age" value={entry.age} />
+              <Spec label="Style" value={entry.whiskyType} />
               <Spec label="Finish" value={entry.finish} />
               {entry.mashbill ? (
                 <div className="spec-card spec-card--wide">
@@ -137,6 +140,30 @@ export default async function LogDetailPage({
             </>
           )}
         </div>
+
+        {entry.stores?.length ? (
+          <div className="log-detail-notes">
+            <p className="eyebrow">Where to Find It</p>
+            <ul className="pick-store-list">
+              {entry.stores.map((store) => (
+                <li key={store.name} className="pick-store-list__item">
+                  {store.logoImage ? (
+                    <Image
+                      src={store.logoImage}
+                      alt={`${store.name} logo`}
+                      width={32}
+                      height={32}
+                      className="pick-store-list__logo"
+                      style={{ objectFit: "contain" }}
+                    />
+                  ) : null}
+                  <strong>{store.name}</strong>
+                  {store.location ? <span> — {store.location}</span> : null}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
 
         {entry.notes ? (
           <div className="log-detail-notes">
