@@ -15,20 +15,20 @@ const brandPartners = [
 
 const consultingServices = [
   {
-    title: "Brand ambassador presence",
-    copy: "A polished whiskey voice for tastings, launches, account visits, and consumer moments that need more than a script.",
+    title: "Showing up for your brand",
+    copy: "Tastings, launch events, club dinners, retail appearances — I show up prepared, on brand, and with an audience that already trusts my recommendations. The people who follow me know I don't work with brands I don't believe in. Every bottle I represent is already in my cabinet because I've been buying that brand for years. That means I can speak to the history, the story, the mashbill, and the reasons it belongs in someone's glass — and people in that room can tell the difference.",
   },
   {
-    title: "Retail tasting execution",
-    copy: "Store-level experiences that make the bottle easier to understand, recommend, and remember.",
+    title: "Retail that actually sticks",
+    copy: "A one-time tasting bump isn't a strategy. The goal is retail partners who know the bottle well enough to recommend it, reorder it, and eventually want to pick their own barrel. I work with store staff and buyers to build real familiarity with a brand — the kind that shows up in conversations with customers long after I've left the room.",
   },
   {
-    title: "Trade relationship support",
-    copy: "Clear communication with stores, distributors, and brand teams before and after the public-facing work.",
+    title: "Relationships that move product",
+    copy: "Distributors are an essential part of getting a bottle to market, and those relationships matter. What I add is deep familiarity with the South Carolina market — real connections with buyers, store staff, and the bourbon community that took time and consistency to build. That's the difference between a placement and a partnership.",
   },
   {
     title: "Field notes and next steps",
-    copy: "Useful readouts on buyer feedback, account needs, consumer response, and where the brand can go next.",
+    copy: "After every event or tasting, I follow up — with the brand, with the store, and thirty days later to see what actually moved. I communicate however works best for the team: forms, email, text. What I bring back isn't just a recap — it's observations, opportunities, and a clear picture of what to do next. The brands I do my best work for are the ones who are ready to have that conversation.",
   },
 ];
 
@@ -51,8 +51,8 @@ export default function ConsultingPage() {
     <>
       <PageHero
         eyebrow="Consulting"
-        title="A trusted voice for the bottle beyond the label."
-        description="Brand ambassador and field support for whiskey teams that want the story, the tasting, and the follow-up to feel connected."
+        title="The South Carolina market presence your brand can't afford to skip."
+        description="Hiring a full-time sales rep isn't always an option. Distributor incentives buy a moment, not a relationship. I work with whiskey brands that want more than a placement — stores that know the bottle, staff that can talk about it, and accounts that keep coming back."
       >
         <div className="hero__actions hero__actions--compact">
           <Link className="button" href="#consulting-inquiry">
@@ -71,9 +71,11 @@ export default function ConsultingPage() {
         </Reveal>
         <Reveal className="consulting-intro__detail" delay={0.08}>
           <p>
-            Tiffany helps whiskey brands show up with warmth, clarity, and credibility: translating the
-            product for retail teams, leading tastings with confidence, and bringing useful feedback back to
-            the people building the brand.
+            I don&apos;t just show up and pour — I bring people with me. After years of building a community
+            around honest picks, real relationships, and showing up consistently, my audience follows me to
+            tastings, clubs, and events. When I&apos;m in the room representing your brand, I&apos;m not
+            starting cold. People are there because they trust what I recommend. That trust is what I bring
+            to every pour.
           </p>
         </Reveal>
       </section>
@@ -81,8 +83,8 @@ export default function ConsultingPage() {
       <section className="shell section consulting-partners">
         <Reveal>
           <SectionHeading
-            eyebrow="Current Partners"
-            title="Brands Tiffany is working with"
+            eyebrow="Who I Work With"
+            title="Brands I believe in."
           />
         </Reveal>
         <div className="consulting-partners__grid">
@@ -106,9 +108,9 @@ export default function ConsultingPage() {
       <section className="shell section">
         <Reveal>
           <SectionHeading
-            eyebrow="What Tiffany Supports"
-            title="Presence, education, and practical follow-through"
-            description="The work can flex around the brand: a polished public appearance, a focused retail push, or a fuller field-support rhythm."
+            eyebrow="What I Bring"
+            title="The work behind the reputation."
+            description="Whether you need me for a single event or as your boots on the ground in South Carolina, here's what that looks like."
           />
         </Reveal>
         <div className="consulting-service-list">
@@ -124,35 +126,6 @@ export default function ConsultingPage() {
         </div>
       </section>
 
-      <section className="shell section consulting-proof">
-        <Reveal>
-          <p className="eyebrow">Where It Helps</p>
-          <h2>Useful when a brand needs more than a placement.</h2>
-        </Reveal>
-        <div className="consulting-proof__grid">
-          <Reveal className="editorial-panel" delay={0.05}>
-            <h3>Emerging brands</h3>
-            <p>
-              Bring a credible, hospitality-minded whiskey voice into markets where the brand is still
-              earning recognition.
-            </p>
-          </Reveal>
-          <Reveal className="editorial-panel" delay={0.1}>
-            <h3>Launch moments</h3>
-            <p>
-              Give a new bottle or campaign a stronger room presence, clearer education, and a better path
-              after the first pour.
-            </p>
-          </Reveal>
-          <Reveal className="editorial-panel" delay={0.15}>
-            <h3>Retail learning</h3>
-            <p>
-              Understand what buyers, staff, and drinkers are responding to so the next conversation gets
-              sharper.
-            </p>
-          </Reveal>
-        </div>
-      </section>
 
       <section className="shell section consulting-process">
         <Reveal>
