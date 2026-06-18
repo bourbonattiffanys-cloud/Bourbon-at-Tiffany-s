@@ -79,9 +79,11 @@ export const myPickLogEntries: BarrelLogEntry[] = [
     releaseDate: "2026-06",
     bottleCount: 186,
     proof: "110 proof",
+    age: "8.5 years",
+    whiskyType: "Straight Rye Whiskey",
     mashbill: "51% rye, 45% corn, 4% malted barley",
     availability: "upcoming",
-    notes: "8.5 year old",
+    notes: "Distilled at MGP",
   },
   {
     id: "broad-branch-distillery-2025-05",

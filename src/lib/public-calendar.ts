@@ -146,9 +146,14 @@ function normalizeIcsEvent(event: IcsEvent, kind: ScheduleKind): ScheduleItem | 
     return undefined;
   }
 
+  const descriptionText = (event.description ?? "")
+    .replace(/<[^>]*>/g, " ")
+    .replace(/&[a-z]+;/gi, " ")
+    .toLowerCase();
+
   const isPublic =
     title.toLowerCase().includes("#public") ||
-    (event.description ?? "").toLowerCase().includes("#public");
+    descriptionText.includes("#public");
 
   if (!isPublic) {
     return undefined;
