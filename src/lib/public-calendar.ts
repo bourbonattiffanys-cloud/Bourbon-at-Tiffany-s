@@ -146,6 +146,14 @@ function normalizeIcsEvent(event: IcsEvent, kind: ScheduleKind): ScheduleItem | 
     return undefined;
   }
 
+  const isPublic =
+    title.toLowerCase().includes("#public") ||
+    (event.description ?? "").toLowerCase().includes("#public");
+
+  if (!isPublic) {
+    return undefined;
+  }
+
   return {
     id: event.id,
     kind,

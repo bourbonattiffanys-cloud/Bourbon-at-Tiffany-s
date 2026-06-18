@@ -212,8 +212,8 @@ span {
 
 .button--ghost {
   background: transparent;
-  color: #d8fffd;
-  border-color: rgba(10, 186, 181, 0.46);
+  color: #0a7a76;
+  border-color: rgba(10, 186, 181, 0.8);
   box-shadow: none;
 }
 

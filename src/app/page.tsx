@@ -53,8 +53,7 @@ export default function HomePage() {
         <Reveal>
           <SectionHeading
             eyebrow="Featured Picks"
-            title="Where the bottle story lives"
-            description="Upcoming releases."
+            title="What's coming next."
             action={
               <Link className="text-link" href="/picks">
                 Browse all picks
