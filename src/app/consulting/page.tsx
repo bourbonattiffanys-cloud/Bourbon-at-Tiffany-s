@@ -127,33 +127,14 @@ export default function ConsultingPage() {
       </section>
 
 
-      <section className="shell section consulting-process">
-        <Reveal>
-          <SectionHeading
-            eyebrow="How It Works"
-            title="A simple rhythm for showing up well"
-            description="Start with the bottle and the audience, then shape the right mix of education, appearances, retail support, and follow-up."
-          />
-        </Reveal>
-        <ol className="consulting-process__list">
-          {processSteps.map((step, index) => (
-            <Reveal key={step} delay={index * 0.05}>
-              <li>
-                <span>{index + 1}</span>
-                <p>{step}</p>
-              </li>
-            </Reveal>
-          ))}
-        </ol>
-      </section>
 
       <section id="consulting-inquiry" className="shell section contact-layout consulting-contact">
         <Reveal className="contact-copy editorial-panel">
           <p className="eyebrow">Start The Conversation</p>
-          <h2>Tell Tiffany what the brand is trying to build.</h2>
+          <h2>Let&apos;s talk about what you&apos;re trying to build.</h2>
           <p>
-            Share the bottle, the audience, and the kind of support that would make the next chapter easier.
-            Tiffany can follow up with the right questions and a private path forward.
+            Share the bottle, the audience, and the kind of support that would make the biggest difference.
+            I&apos;ll follow up with the right questions and a path forward.
           </p>
         </Reveal>
         <Reveal delay={0.08}>
