@@ -15,8 +15,8 @@ export default function ExperiencesPage() {
     <>
       <PageHero
         eyebrow="Experiences"
-        title="Educational tastings that still know how to host a room."
-        description="From first pours to collector-level conversations, each offering is framed to feel polished, personal, and easy to book."
+        title="The stories behind the bottle, brought to your table."
+        description="Not everyone can visit every distillery. I bring the brands you've never heard of, the history you didn't know existed, and the bottles you can't find on a shelf — and I make it feel like you were there."
       >
         <div className="hero__actions hero__actions--compact">
           <a className="button" href={siteConfig.bookingUrl ?? "/contact"}>
@@ -27,6 +27,21 @@ export default function ExperiencesPage() {
           </Link>
         </div>
       </PageHero>
+      <section className="shell section consulting-intro">
+        <Reveal className="consulting-intro__copy">
+          <h2>Every flight has a reason.</h2>
+        </Reveal>
+        <Reveal className="consulting-intro__detail" delay={0.08}>
+          <p>
+            I build every menu by hand, pulling from a collection that has long since outgrown its dedicated
+            space. These aren&apos;t everyday pours — they&apos;re specialty barrels, rare grains,
+            distillery-only bottles, and selections chosen because they have something worth talking about.
+            The science of the barrel, the story of the distillery, the reason one sip tastes nothing like
+            the last.
+          </p>
+        </Reveal>
+      </section>
+
       <section className="shell section">
         <div className="service-grid">
           {services.map((service, index) => (
