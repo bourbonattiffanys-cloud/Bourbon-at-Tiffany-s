@@ -61,7 +61,7 @@ export default function AboutPage() {
             enjoy bourbon.
           </p>
 
-          <h2>The first distillery that said yes</h2>
+          <h2>Consistency gets noticed</h2>
           <p>
             In the fall of 2023, I was on a barrel pick at High Wire Distilling. I was still finding my
             footing with the tasting business — I didn't have a huge social media following, but I posted
@@ -101,6 +101,13 @@ export default function AboutPage() {
             collaboration with Clemson women's basketball coach Shawn Poppie — and launched my own Vault
             Collection through them as well.
           </p>
+          <p>
+            From there I picked up a contract with Broad Branch Distillery for retail and sales support.
+            This was the moment things shifted — not just in the volume of work, but in what it represented.
+            Brands were reaching out. The reputation I had been quietly building was starting to open doors
+            I hadn&apos;t knocked on. Bourbon at Tiffany&apos;s was becoming exactly what I had hoped it
+            could be.
+          </p>
 
           <div className="about-bottles">
             <Reveal delay={0.05}>
@@ -138,7 +145,7 @@ export default function AboutPage() {
               <li>Stave &amp; Thief Society Certified Bourbon Steward</li>
               <li>Brand ambassador and field partner for High Wire Distilling, Broad Branch Distillery, ASW Distillery, and Driftless Glen</li>
               <li>Barrel picks across multiple distilleries with a growing archive of single barrel selections</li>
-              <li>Based in Chapin, SC — serving bourbon lovers across South Carolina</li>
+              <li>Based in the Midlands of SC — serving bourbon lovers across South Carolina</li>
             </ul>
           </div>
         </Reveal>
