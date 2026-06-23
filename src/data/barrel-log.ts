@@ -82,7 +82,7 @@ export const myPickLogEntries: BarrelLogEntry[] = [
     age: "8.5 years",
     whiskyType: "Straight Rye Whiskey",
     mashbill: "51% rye, 45% corn, 4% malted barley",
-    availability: "upcoming",
+    availability: "available",
     notes: "Distilled at MGP",
   },
   {

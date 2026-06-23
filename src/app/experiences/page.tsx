@@ -1,8 +1,51 @@
+import Image from "next/image";
 import Link from "next/link";
 import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/reveal";
-import { services } from "@/data/services";
 import { createMetadata, siteConfig } from "@/lib/site";
+
+const eventGalleries = [
+  {
+    caption: "A private tasting hosted for Clemson Women's Basketball Head Coach Shawn Poppie",
+    images: [
+      { src: "/assets/events/clemson-wbb-10-2025-01.jpg", aspect: "3/4" },
+      { src: "/assets/events/clemson-wbb-10-2025-02.JPEG", aspect: "3/4" },
+      { src: "/assets/events/clemson-wbb-10-2025-03.JPEG" },
+      { src: "/assets/events/clemson-wbb-10-2025-04.JPEG" },
+      { src: "/assets/events/clemson-wbb-10-2025-05.JPEG" },
+    ],
+  },
+  {
+    caption: "A food and bourbon pairing experience",
+    images: [
+      { src: "/assets/events/food-bourbon-pairing-01.JPEG" },
+      { src: "/assets/events/food-bourbon-pairing-02.JPEG", position: "top" },
+    ],
+  },
+  {
+    caption: "A private tasting, August 2023",
+    images: [
+      { src: "/assets/events/private-group-8-2023-03.JPEG" },
+      { src: "/assets/events/private-group-8-2023-04.JPEG" },
+    ],
+  },
+  {
+    caption: "A private tasting, September 2023",
+    images: [
+      { src: "/assets/events/private-group-9-2023-01.JPG" },
+      { src: "/assets/events/private-group-9-2023-02.JPG" },
+      { src: "/assets/events/private-group-9-2023-03.JPG", position: "top left" },
+    ],
+  },
+  {
+    caption: "A 70th birthday tasting — six bottles selected so their ages added up to exactly seventy, with custom glassware made for the occasion",
+    images: [],
+  },
+  {
+    caption: "A private birthday tasting",
+    images: [],
+  },
+];
 
 export const metadata = createMetadata({
   title: "Experiences",
@@ -42,23 +85,46 @@ export default function ExperiencesPage() {
         </Reveal>
       </section>
 
-      <section className="shell section">
-        <div className="service-grid">
-          {services.map((service, index) => (
-            <Reveal key={service.slug} delay={index * 0.05}>
-              <article className="service-card service-card--tall">
-                <p className="eyebrow">{service.price}</p>
-                <h2>{service.name}</h2>
-                <p>{service.summary}</p>
-                <ul>
-                  {service.highlights.map((highlight) => (
-                    <li key={highlight}>{highlight}</li>
-                  ))}
-                </ul>
-              </article>
-            </Reveal>
-          ))}
-        </div>
+      {eventGalleries.map((gallery, gi) => (
+        <section key={gi} className="shell section event-gallery">
+          <Reveal>
+            <p className="event-gallery__caption eyebrow">{gallery.caption}</p>
+          </Reveal>
+          {gallery.images.length > 0 && (
+            <div className="event-gallery__grid">
+              {gallery.images.map((image, i) => (
+                <Reveal key={image.src} delay={i * 0.05}>
+                  <div
+                    className="event-gallery__item"
+                    style={{ aspectRatio: image.aspect ?? "4/3" }}
+                  >
+                    <Image
+                      src={image.src}
+                      alt={`Event photo ${i + 1}`}
+                      width={800}
+                      height={600}
+                      className="event-gallery__img"
+                      style={{ objectPosition: image.position ?? "center" }}
+                    />
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          )}
+        </section>
+      ))}
+
+      <section className="shell section experiences-contact">
+        <Reveal className="experiences-contact__inner">
+          <h2>Ready to plan something?</h2>
+          <p>
+            Every tasting is built around the people in the room. Tell me who you&apos;re hosting,
+            what you want them to walk away knowing, and I&apos;ll take it from there.
+          </p>
+          <Link className="button" href="/contact">
+            Get in touch
+          </Link>
+        </Reveal>
       </section>
     </>
   );

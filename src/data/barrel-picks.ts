@@ -5,7 +5,7 @@ export const barrelPicks: BarrelPick[] = [
     slug: "alvin-langston-vault-rye-2026",
     title: "The Vault Collection, presented by Bourbon at Tiffany's",
     subtitle: "Alvin Langston · 8.5 Year Straight Rye · Single Barrel · Cask Strength",
-    status: "announced",
+    status: "available",
     releaseDate: "2026-06",
     bottleCount: 186,
     proof: "110 proof",

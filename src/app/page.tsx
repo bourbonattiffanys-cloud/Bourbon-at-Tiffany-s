@@ -4,7 +4,6 @@ import { Reveal } from "@/components/reveal";
 import { PickCard } from "@/components/pick-card";
 import { SectionHeading } from "@/components/section-heading";
 import { featuredPicks } from "@/data/barrel-picks";
-import { services } from "@/data/services";
 import { testimonials } from "@/data/testimonials";
 import { createMetadata, siteConfig } from "@/lib/site";
 
@@ -70,18 +69,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="shell section split-showcase split-showcase--framed">
+      <section className="shell section split-showcase split-showcase--framed section--alt">
         <Reveal className="split-showcase__story">
           <p className="eyebrow">About Tiffany</p>
           <h2>Every sip has a story. I&apos;m here to tell it.</h2>
           <p>
-            Bourbon at Tiffany&apos;s was built around the untold stories. A tasting isn&apos;t just about
-            what&apos;s in the glass — it&apos;s about the farmer who grew the grain, the timber farmer who
-            supplied the oak, the cooper who built the barrel, the distiller who made the cut, the team
-            rolling barrels into the rickhouse, the bottling line, the logistics crew getting it to the
-            shelf, and everyone in between whose work made that sip possible. Most people will never travel
-            to every distillery across the country. I go so you don&apos;t have to, and I bring the whole
-            story back with me.
+            Most people pour without knowing the half of it — the grain, the barrel, the decision to cut
+            at exactly the right moment. I&apos;ve spent years learning those stories so that when you sit
+            down at one of my tastings, what&apos;s in the glass actually means something. Every bottle has
+            a story most people never hear. I make sure you do.
           </p>
           <Link className="text-link" href="/about">
             Read my story
@@ -99,43 +95,36 @@ export default function HomePage() {
         </Reveal>
       </section>
 
-      <section className="shell section">
-        <Reveal>
-          <SectionHeading
-            eyebrow="Experiences"
-            title="Tastings for every stage of the bourbon journey"
-            description="The service side stays premium and easy to scan, with each offer focused on one audience and outcome."
-            action={
-              <Link className="text-link" href="/experiences">
-                View experiences
-              </Link>
-            }
-          />
+      <section className="shell section home-experiences">
+        <Reveal className="home-experiences__copy">
+          <p className="eyebrow">Experiences</p>
+          <h2>Every occasion. Every story. Every pour.</h2>
+          <p>From themed birthday celebrations to corporate client appreciation events to an intimate evening among friends.</p>
+          <p className="home-experiences__tagline">Every pour has a purpose.</p>
+          <Link className="text-link" href="/experiences">
+            See experiences
+          </Link>
         </Reveal>
-        <div className="service-grid">
-          {services.map((service, index) => (
-            <Reveal key={service.slug} delay={index * 0.05}>
-              <article className="service-card">
-                <p className="eyebrow">{service.price}</p>
-                <h3>{service.name}</h3>
-                <p>{service.summary}</p>
-                <ul>
-                  {service.highlights.map((highlight) => (
-                    <li key={highlight}>{highlight}</li>
-                  ))}
-                </ul>
-              </article>
-            </Reveal>
-          ))}
-        </div>
+        <Reveal className="home-experiences__photos" delay={0.08}>
+          <div className="home-experiences__grid">
+            <div className="home-experiences__photo">
+              <Image src="/assets/events/clemson-wbb-10-2025-03.JPEG" alt="Private tasting event" fill sizes="33vw" style={{ objectFit: "cover" }} />
+            </div>
+            <div className="home-experiences__photo">
+              <Image src="/assets/events/private-group-9-2023-01.JPG" alt="Private tasting event" fill sizes="33vw" style={{ objectFit: "cover" }} />
+            </div>
+            <div className="home-experiences__photo">
+              <Image src="/assets/events/private-group-8-2023-01.JPEG" alt="Private tasting event" fill sizes="33vw" style={{ objectFit: "cover" }} />
+            </div>
+          </div>
+        </Reveal>
       </section>
 
       <section className="shell section testimonials-block">
         <Reveal>
           <SectionHeading
             eyebrow="What Clients Say"
-            title="Credibility without the corporate tone"
-            description="The best proof is still the room after the tasting: informed, energized, and talking about the next pour."
+            title="From the people in the room."
             align="center"
           />
         </Reveal>
