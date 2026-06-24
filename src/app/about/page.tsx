@@ -138,9 +138,18 @@ export default function AboutPage() {
         </Reveal>
 
         <Reveal className="about-story__rail" delay={0.08}>
+          <div className="about-headshot">
+            <Image
+              src="/assets/about/Tiffany-silly-headshot.JPEG"
+              alt="Tiffany"
+              width={400}
+              height={400}
+              className="about-headshot__img"
+            />
+          </div>
           <div className="editorial-panel">
             <p className="eyebrow">Credentials</p>
-            <h3>Grounded in learning, not gatekeeping</h3>
+            <h3>Built on standards, grounded in learning, driven by relationships.</h3>
             <ul className="detail-list">
               <li>Stave &amp; Thief Society Certified Bourbon Steward</li>
               <li>Brand ambassador and field partner for High Wire Distilling, Broad Branch Distillery, ASW Distillery, and Driftless Glen</li>

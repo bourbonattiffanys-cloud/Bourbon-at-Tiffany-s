@@ -1727,6 +1727,19 @@ a:focus-visible {
   }
 }
 
+/* ── About headshot ── */
+.about-headshot {
+  margin-bottom: 1.5rem;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.about-headshot__img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* ── Alternating section background ── */
 .section--alt {
   background: var(--bg-soft);
