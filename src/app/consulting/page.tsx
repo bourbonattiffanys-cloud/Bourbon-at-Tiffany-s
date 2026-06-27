@@ -32,13 +32,6 @@ const consultingServices = [
   },
 ];
 
-const processSteps = [
-  "Learn the brand, the bottle, and the audience you want to reach.",
-  "Shape the right mix of tastings, account visits, education, and event support.",
-  "Represent the brand with a consistent voice in the room.",
-  "Follow up with the signals, questions, and opportunities worth acting on.",
-];
-
 export const metadata = createMetadata({
   title: "Consulting",
   path: "/consulting",
