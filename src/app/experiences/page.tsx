@@ -8,6 +8,8 @@ const eventGalleries = [
   {
     caption: "A private tasting hosted for Clemson Women's Basketball Head Coach Shawn Poppie",
     images: [
+      { src: "/assets/events/clemson-wbb-10-2025-02.JPEG", aspect: "3/4" },
+      { src: "/assets/events/clemson-wbb-10-2025-03.JPEG" },
       { src: "/assets/events/clemson-wbb-10-2025-04.JPEG" },
       { src: "/assets/events/clemson-wbb-10-2025-05.JPEG" },
     ],
