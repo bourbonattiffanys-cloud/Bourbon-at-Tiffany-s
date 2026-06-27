@@ -114,7 +114,7 @@ export default function HomePage() {
               <Image src="/assets/events/private-group-9-2023-01.JPG" alt="Private tasting event" fill sizes="33vw" style={{ objectFit: "cover" }} />
             </div>
             <div className="home-experiences__photo">
-              <Image src="/assets/events/private-group-8-2023-01.JPEG" alt="Private tasting event" fill sizes="33vw" style={{ objectFit: "cover" }} />
+              <Image src="/assets/events/private-group-8-2023-03.JPEG" alt="Private tasting event" fill sizes="33vw" style={{ objectFit: "cover" }} />
             </div>
           </div>
         </Reveal>
