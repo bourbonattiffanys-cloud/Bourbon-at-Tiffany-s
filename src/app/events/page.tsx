@@ -44,8 +44,8 @@ export default async function EventsPage() {
       <section className="shell section">
         <ScheduleList
           items={events}
-          emptyTitle="No public events are posted yet."
-          emptyDescription="Once Tiffany adds events to her public Google Calendar, they will appear here automatically with the site styling."
+          emptyTitle="Nothing posted yet."
+          emptyDescription="Check back soon."
         />
       </section>
     </>
