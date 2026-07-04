@@ -8,11 +8,7 @@ export function SiteFooter() {
       <div className="shell site-footer__grid">
         <div>
           <p className="eyebrow">Bourbon at Tiffany&apos;s</p>
-          <h2>A Southern whiskey point of view.</h2>
-          <p className="footer-copy">
-            Private tastings, barrel-pick stories, and upcoming release details rooted in hospitality,
-            clarity, and good bourbon conversation.
-          </p>
+          <h2>Rooted in South Carolina. Every pour intentional.</h2>
         </div>
         <div>
           <p className="footer-label">Explore</p>

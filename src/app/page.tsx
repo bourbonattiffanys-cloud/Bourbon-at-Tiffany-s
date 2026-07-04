@@ -10,7 +10,7 @@ import { createMetadata, siteConfig } from "@/lib/site";
 export const metadata = createMetadata({
   title: siteConfig.name,
   description:
-    "A refined home for Tiffany's bourbon education, barrel picks, and upcoming releases in South Carolina.",
+    "Private tastings, barrel picks, and brand consulting — built on standards, grounded in learning, driven by relationships.",
 });
 
 export default function HomePage() {
@@ -145,14 +145,10 @@ export default function HomePage() {
 
 <section className="shell section final-cta">
         <Reveal>
-          <p className="eyebrow">Ready to work together?</p>
-          <h2>Book a tasting or join the next barrel-pick list.</h2>
+          <h2>Tastings. Consulting. Picks.</h2>
           <div className="hero__actions final-cta__actions">
             <Link className="button" href="/contact">
-              Contact Tiffany
-            </Link>
-            <Link className="button button--secondary" href="/picks">
-              Register for a pick
+              Start the conversation
             </Link>
           </div>
         </Reveal>
