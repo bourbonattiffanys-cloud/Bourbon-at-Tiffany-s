@@ -146,30 +146,24 @@ function normalizeIcsEvent(event: IcsEvent, kind: ScheduleKind): ScheduleItem | 
     return undefined;
   }
 
-  const descriptionText = (event.description ?? "")
-    .replace(/<[^>]*>/g, " ")
-    .replace(/&[a-z]+;/gi, " ")
-    .toLowerCase();
-
-  const isPublic =
-    title.toLowerCase().includes("#public") ||
-    descriptionText.includes("#public");
-
-  if (!isPublic) {
+  if (!event.location?.trim()) {
     return undefined;
   }
+
+  const cleanTitle = title;
+  const cleanDescription = event.description;
 
   return {
     id: event.id,
     kind,
-    title,
+    title: cleanTitle,
     startsAt: event.start.value,
     endsAt: event.end?.value,
     allDay: event.start.allDay,
     location: event.location?.trim() || undefined,
-    description: normalizeCalendarDescription(event.description),
+    description: normalizeCalendarDescription(cleanDescription),
     eventUrl: event.url,
-    ctaUrl: extractFirstUrl(event.description),
+    ctaUrl: extractFirstUrl(cleanDescription),
     timeZone: event.start.timeZone ?? event.end?.timeZone,
   };
 }
