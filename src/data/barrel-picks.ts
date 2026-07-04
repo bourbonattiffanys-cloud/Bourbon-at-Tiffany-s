@@ -83,12 +83,25 @@ export const barrelPicks: BarrelPick[] = [
   },
 ];
 
+const statusOrder: Record<string, number> = {
+  announced: 0,
+  "interest-open": 0,
+  available: 1,
+  "sold-out": 2,
+  archived: 3,
+};
+
 export const availablePicks = barrelPicks.filter((pick) => pick.status === "available");
-export const featuredPicks = barrelPicks.filter((pick) => pick.featured);
 export const pastPicks = barrelPicks.filter((pick) => pick.status === "archived");
 export const upcomingPicks = barrelPicks.filter(
   (pick) => pick.status === "announced" || pick.status === "interest-open",
 );
+
+export const featuredPicks = [...barrelPicks]
+  .filter((pick) => pick.status !== "archived")
+  .sort((a, b) => new Date(b.releaseDate ?? "").getTime() - new Date(a.releaseDate ?? "").getTime())
+  .slice(0, 3)
+  .sort((a, b) => (statusOrder[a.status] ?? 99) - (statusOrder[b.status] ?? 99));
 
 export function getPickBySlug(slug: string) {
   return barrelPicks.find((pick) => pick.slug === slug);
