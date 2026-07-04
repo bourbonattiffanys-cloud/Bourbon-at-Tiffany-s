@@ -38,8 +38,8 @@ export default async function EventsPage() {
       />
       <PageHero
         eyebrow="Events"
-        title="Upcoming bourbon events."
-        description="Where Tiffany is pouring, teaching, promoting bottles, and joining whiskey community dates as soon as they are added to her events calendar."
+        title="Where the next pour is happening."
+        description="Retail tastings, barrel picks, bottle shares, and the occasional top secret screening. If it's on here, you're invited."
       />
       <section className="shell section">
         <ScheduleList
