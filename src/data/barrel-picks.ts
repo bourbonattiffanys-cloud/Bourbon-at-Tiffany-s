@@ -67,7 +67,7 @@ export const barrelPicks: BarrelPick[] = [
     slug: "dettling-tiffany-3-2026",
     title: "Dettling — Tiffany 3",
     subtitle: "6 Grain · Single Barrel · Cask Strength · All Female Pick Team · Presented by Bourbon at Tiffany's",
-    status: "available",
+    status: "sold-out",
     releaseDate: "2026-06",
     bottleCount: 150,
     proof: "115.6 proof",
