@@ -16,7 +16,7 @@ export async function POST(request: Request) {
 
     await deliverFormSubmission(parsed.data, "contact");
 
-    return NextResponse.json({ message: "Thank you. Tiffany will be in touch soon." });
+    return NextResponse.json({ message: "Message received. I'll be in touch soon." });
   } catch {
     return NextResponse.json({ error: "Unable to send your inquiry right now." }, { status: 500 });
   }

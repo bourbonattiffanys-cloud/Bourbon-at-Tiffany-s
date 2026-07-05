@@ -8,14 +8,14 @@ export function PageHero({
 }: {
   eyebrow: string;
   title: string;
-  description: string;
+  description?: string;
   children?: ReactNode;
 }) {
   return (
     <section className="page-hero shell shell--narrow">
       <p className="eyebrow">{eyebrow}</p>
       <h1>{title}</h1>
-      <p className="page-hero__copy">{description}</p>
+      {description ? <p className="page-hero__copy">{description}</p> : null}
       {children}
     </section>
   );

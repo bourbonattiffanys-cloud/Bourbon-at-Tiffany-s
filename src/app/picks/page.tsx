@@ -36,8 +36,7 @@ export default async function PicksPage() {
     <>
       <PageHero
         eyebrow="Barrel Picks"
-        title="Barrel picks, past and present."
-        description="Revisit favorite releases, follow what is coming next, and see the collaborations that have shaped the Bourbon at Tiffany's story."
+        title="Every barrel earned its place because it met a standard, not a deadline."
       />
 
       <div className="shell log-totals-strip">

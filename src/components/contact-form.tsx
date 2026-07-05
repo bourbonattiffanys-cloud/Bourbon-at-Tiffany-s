@@ -2,14 +2,13 @@
 
 import { useState } from "react";
 
-const initialState = {
-  name: "",
-  email: "",
-  phone: "",
-  interest: "tasting",
-  groupSize: "",
-  message: "",
-};
+type InquiryType = "tasting" | "picks" | "consulting";
+
+const inquiryOptions: { value: InquiryType; label: string }[] = [
+  { value: "tasting", label: "Private tasting or event" },
+  { value: "picks", label: "Barrel pick notifications" },
+  { value: "consulting", label: "Brand consulting" },
+];
 
 type Status =
   | { type: "idle" }
@@ -17,30 +16,64 @@ type Status =
   | { type: "error"; message: string };
 
 export function ContactForm() {
-  const [formData, setFormData] = useState(initialState);
+  const [inquiryType, setInquiryType] = useState<InquiryType>("tasting");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [date, setDate] = useState("");
+  const [groupSize, setGroupSize] = useState("");
+  const [occasion, setOccasion] = useState("");
+  const [company, setCompany] = useState("");
+  const [message, setMessage] = useState("");
   const [status, setStatus] = useState<Status>({ type: "idle" });
   const [submitting, setSubmitting] = useState(false);
+
+  function handleInquiryChange(value: InquiryType) {
+    setInquiryType(value);
+    setStatus({ type: "idle" });
+  }
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setSubmitting(true);
     setStatus({ type: "idle" });
 
+    const payload =
+      inquiryType === "tasting"
+        ? { inquiryType, name, email, phone, date, groupSize, occasion, message }
+        : inquiryType === "picks"
+          ? { inquiryType, name, email }
+          : { inquiryType, name, email, company, message };
+
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(payload),
       });
 
-      const payload = (await response.json()) as { error?: string; message?: string };
+      const data = (await response.json()) as { error?: string; message?: string };
 
       if (!response.ok) {
-        throw new Error(payload.error ?? "Something went wrong.");
+        throw new Error(data.error ?? "Something went wrong.");
       }
 
-      setStatus({ type: "success", message: payload.message ?? "Thank you. Tiffany will be in touch soon." });
-      setFormData(initialState);
+      setStatus({
+        type: "success",
+        message:
+          inquiryType === "picks"
+            ? "You're on the list. I'll be in touch when the next pick is ready."
+            : data.message ?? "Message received. I'll be in touch soon.",
+      });
+
+      setName("");
+      setEmail("");
+      setPhone("");
+      setDate("");
+      setGroupSize("");
+      setOccasion("");
+      setCompany("");
+      setMessage("");
     } catch (error) {
       setStatus({
         type: "error",
@@ -54,71 +87,92 @@ export function ContactForm() {
   return (
     <form className="form-panel" onSubmit={handleSubmit}>
       <div className="form-grid">
+        <label className="form-grid__full">
+          What are we planning?
+          <select
+            value={inquiryType}
+            onChange={(e) => handleInquiryChange(e.target.value as InquiryType)}
+            name="inquiryType"
+          >
+            {inquiryOptions.map((opt) => (
+              <option key={opt.value} value={opt.value}>
+                {opt.label}
+              </option>
+            ))}
+          </select>
+        </label>
+
         <label>
           Name
-          <input
-            value={formData.name}
-            onChange={(event) => setFormData((current) => ({ ...current, name: event.target.value }))}
-            name="name"
-            required
-          />
+          <input value={name} onChange={(e) => setName(e.target.value)} name="name" required />
         </label>
         <label>
           Email
-          <input
-            type="email"
-            value={formData.email}
-            onChange={(event) => setFormData((current) => ({ ...current, email: event.target.value }))}
-            name="email"
-            required
-          />
+          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} name="email" required />
         </label>
-        <label>
-          Phone
-          <input
-            value={formData.phone}
-            onChange={(event) => setFormData((current) => ({ ...current, phone: event.target.value }))}
-            name="phone"
-          />
-        </label>
-        <label>
-          Interest
-          <select
-            value={formData.interest}
-            onChange={(event) => setFormData((current) => ({ ...current, interest: event.target.value }))}
-            name="interest"
-          >
-            <option value="tasting">Private tasting</option>
-            <option value="private-event">Private event</option>
-            <option value="barrel-pick">Barrel pick</option>
-            <option value="general">General inquiry</option>
-          </select>
-        </label>
-        <label>
-          Group size
-          <input
-            value={formData.groupSize}
-            onChange={(event) => setFormData((current) => ({ ...current, groupSize: event.target.value }))}
-            name="groupSize"
-          />
-        </label>
-        <label className="form-grid__full">
-          Tell Tiffany what you are planning
-          <textarea
-            rows={6}
-            value={formData.message}
-            onChange={(event) => setFormData((current) => ({ ...current, message: event.target.value }))}
-            name="message"
-            required
-          />
-        </label>
+
+        {inquiryType === "consulting" ? (
+          <>
+            <label>
+              Brand or company
+              <input value={company} onChange={(e) => setCompany(e.target.value)} name="company" required />
+            </label>
+            <label className="form-grid__full">
+              What are you working on?
+              <textarea rows={6} value={message} onChange={(e) => setMessage(e.target.value)} name="message" required />
+            </label>
+          </>
+        ) : inquiryType === "tasting" ? (
+          <>
+            <label>
+              Phone
+              <input type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} name="phone" />
+            </label>
+            <label>
+              Preferred date or timeframe
+              <input
+                value={date}
+                onChange={(e) => setDate(e.target.value)}
+                name="date"
+                placeholder="e.g. first weekend in October"
+              />
+            </label>
+            <label>
+              Approximate group size
+              <input
+                value={groupSize}
+                onChange={(e) => setGroupSize(e.target.value)}
+                name="groupSize"
+                placeholder="e.g. 12–15 people"
+              />
+            </label>
+            <label>
+              What&apos;s the occasion?
+              <input
+                value={occasion}
+                onChange={(e) => setOccasion(e.target.value)}
+                name="occasion"
+                placeholder="e.g. birthday, corporate event, girls&apos; night"
+              />
+            </label>
+            <label className="form-grid__full">
+              Anything else I should know?
+              <textarea rows={5} value={message} onChange={(e) => setMessage(e.target.value)} name="message" />
+            </label>
+          </>
+        ) : null}
       </div>
+
       <div className="form-panel__footer">
         <button className="button" type="submit" disabled={submitting}>
-          {submitting ? "Sending..." : "Send inquiry"}
+          {submitting ? "Sending..." : inquiryType === "picks" ? "Add me to the list" : "Send message"}
         </button>
         {status.type !== "idle" ? (
-          <p className={status.type === "success" ? "form-message form-message--success" : "form-message form-message--error"}>
+          <p
+            className={
+              status.type === "success" ? "form-message form-message--success" : "form-message form-message--error"
+            }
+          >
             {status.message}
           </p>
         ) : null}

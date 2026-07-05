@@ -1838,6 +1838,113 @@ a:focus-visible {
   margin-bottom: 1.5rem;
 }
 
+/* ── About inline photo splits ── */
+.about-story__photo-split {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 2.5rem;
+  align-items: start;
+  margin: 1.5rem 0;
+}
+
+.about-story__inline-photo {
+  position: relative;
+  aspect-ratio: 3/4;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .about-story__photo-split {
+    grid-template-columns: 1fr;
+  }
+
+  .about-story__photo-split .about-story__inline-photo {
+    order: -1;
+    aspect-ratio: 4/3;
+  }
+}
+
+/* ── Partners page ── */
+.partners-intro {
+  font-size: 1.15rem;
+  color: var(--muted);
+  max-width: 680px;
+  margin-bottom: 4rem;
+}
+
+.partner-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.partner-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.partner-card:nth-child(even) .partner-card__media {
+  order: 2;
+}
+
+.partner-card:nth-child(even) .partner-card__copy {
+  order: 1;
+}
+
+.partner-card__media {
+  position: relative;
+  aspect-ratio: 4/5;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.partner-card__business {
+  font-size: 0.95rem;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.partner-card__projects {
+  margin-top: 1.5rem;
+}
+
+.partner-card__projects .eyebrow {
+  margin-bottom: 0.5rem;
+}
+
+.partner-card__projects ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.partner-card .text-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .partner-card {
+    grid-template-columns: 1fr;
+  }
+
+  .partner-card:nth-child(even) .partner-card__media {
+    order: 0;
+  }
+
+  .partner-card:nth-child(even) .partner-card__copy {
+    order: 0;
+  }
+}
+
 @media (max-width: 640px) {
   .event-gallery__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));

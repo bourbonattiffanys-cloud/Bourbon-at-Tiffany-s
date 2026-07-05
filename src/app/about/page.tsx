@@ -62,23 +62,36 @@ export default function AboutPage() {
           </p>
 
           <h2>Consistency gets noticed</h2>
-          <p>
-            In the fall of 2023, I was on a barrel pick at High Wire Distilling. I was still finding my
-            footing with the tasting business — I didn't have a huge social media following, but I posted
-            consistently. What I was drinking, reviews, what I was learning. That built a small presence
-            around South Carolina.
-          </p>
-          <p>
-            That day, Scott and Ann asked me about bourbon tastings for retail events. Two or three weeks
-            later I was back at the distillery for their ten year anniversary, and they introduced me to
-            their national sales manager, Jay Liddell.
-          </p>
-          <p>
-            Jay had a massive impact on me. He was real and honest — taught me a lot, and to this day I
-            can still call him or send him a message when I need advice. High Wire was the first distillery
-            that gave me a chance — even though I didn't have any formal industry experience at that point.
-            That meant a lot.
-          </p>
+          <div className="about-story__photo-split">
+            <div>
+              <p>
+                In the fall of 2023, I was on a barrel pick at High Wire Distilling. I was still finding my
+                footing with the tasting business — I didn't have a huge social media following, but I posted
+                consistently. What I was drinking, reviews, what I was learning. That built a small presence
+                around South Carolina.
+              </p>
+              <p>
+                That day, Scott and Ann asked me about bourbon tastings for retail events. Two or three weeks
+                later I was back at the distillery for their ten year anniversary, and they introduced me to
+                their national sales manager, Jay Liddell.
+              </p>
+              <p>
+                Jay had a massive impact on me. He was real and honest — taught me a lot, and to this day I
+                can still call him or send him a message when I need advice. High Wire was the first distillery
+                that gave me a chance — even though I didn't have any formal industry experience at that point.
+                That meant a lot.
+              </p>
+            </div>
+            <div className="about-story__inline-photo">
+              <Image
+                src="/assets/about/jimmy-red-closeup.JPG"
+                alt="Jimmy Red — High Wire Distilling Co."
+                fill
+                sizes="(max-width: 900px) 100vw, 30vw"
+                style={{ objectFit: "cover" }}
+              />
+            </div>
+          </div>
 
           <h2>In between</h2>
           <p>
@@ -89,39 +102,37 @@ export default function AboutPage() {
           </p>
 
           <h2>Building something real</h2>
-          <p>
-            After that, I started consulting for a new NDP out of South Carolina — Alvin Langston. They
-            had been on shelves for about six months at that point, with their Contrary Cow dark chocolate
-            whiskey as the main product. They wanted to do more single barrel business, and I came in to
-            help make that happen.
-          </p>
-          <p>
-            What started as a five week consulting engagement has grown into an ongoing relationship. I've
-            done several single barrel picks with them, launched the Poppie Collection — a series built in
-            collaboration with Clemson women's basketball coach Shawn Poppie — and launched my own Vault
-            Collection through them as well.
-          </p>
-          <p>
-            From there I picked up a contract with Broad Branch Distillery for retail and sales support.
-            This was the moment things shifted — not just in the volume of work, but in what it represented.
-            Brands were reaching out. The reputation I had been quietly building was starting to open doors
-            I hadn&apos;t knocked on. Bourbon at Tiffany&apos;s was becoming exactly what I had hoped it
-            could be.
-          </p>
-
-          <div className="about-bottles">
-            <Reveal delay={0.05}>
-              <div className="about-bottle">
-                <Image
-                  src="/assets/about/vault-collection.jpeg"
-                  alt="The Vault Collection"
-                  width={400}
-                  height={533}
-                  className="about-bottle__img"
-                />
-                <p>The Vault Collection</p>
-              </div>
-            </Reveal>
+          <div className="about-story__photo-split">
+            <div className="about-story__inline-photo">
+              <Image
+                src="/assets/about/broad-branch-leather.JPG"
+                alt="Broad Branch Big Winston — Bourbon at Tiffany's selection"
+                fill
+                sizes="(max-width: 900px) 100vw, 30vw"
+                style={{ objectFit: "cover" }}
+              />
+            </div>
+            <div>
+              <p>
+                After that, I started consulting for a new NDP out of South Carolina — Alvin Langston. They
+                had been on shelves for about six months at that point, with their Contrary Cow dark chocolate
+                whiskey as the main product. They wanted to do more single barrel business, and I came in to
+                help make that happen.
+              </p>
+              <p>
+                What started as a five week consulting engagement has grown into an ongoing relationship. I've
+                done several single barrel picks with them, launched the Poppie Collection — a series built in
+                collaboration with Clemson women's basketball coach Shawn Poppie — and launched my own Vault
+                Collection through them as well.
+              </p>
+              <p>
+                From there I picked up a contract with Broad Branch Distillery for retail and sales support.
+                This was the moment things shifted — not just in the volume of work, but in what it represented.
+                Brands were reaching out. The reputation I had been quietly building was starting to open doors
+                I hadn&apos;t knocked on. Bourbon at Tiffany&apos;s was becoming exactly what I had hoped it
+                could be.
+              </p>
+            </div>
           </div>
 
           <p>
