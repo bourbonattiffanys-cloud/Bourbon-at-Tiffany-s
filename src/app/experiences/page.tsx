@@ -39,7 +39,13 @@ const eventGalleries = [
   },
   {
     caption: "A 70th birthday tasting — six bottles selected so their ages added up to exactly seventy, with custom glassware made for the occasion",
-    images: [{ src: "/assets/events/70th-birthday-party-01.JPEG", aspect: "1067/1388" }],
+    images: [
+      { src: "/assets/events/70th-birthday-party-04.jpg", aspect: "1172/2101" },
+      { src: "/assets/events/70th-birthday-party-05.jpg", aspect: "1179/1900" },
+      { src: "/assets/events/70th-birthday-party-03.jpg", aspect: "1179/1796" },
+      { src: "/assets/events/70th-birthday-party-01.JPEG", aspect: "1067/1388" },
+      { src: "/assets/events/70th-birthday-party-02.JPEG", aspect: "2615/2652" },
+    ],
   },
   {
     caption: "A private birthday tasting",
