@@ -119,7 +119,7 @@ export const myPickLogEntries: BarrelLogEntry[] = [
     logoDomain: "dettling1867.com",
     pickDate: "2026-05",
     releaseDate: "2026-06",
-    bottleCount: 144,
+    bottleCount: 150,
     proof: "115.6 proof",
     mashbill: "6 grain",
     availability: "sold-out",
