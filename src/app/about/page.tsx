@@ -76,6 +76,13 @@ export default function AboutPage() {
                 their national sales manager, Jay Liddell.
               </p>
               <p>
+                Scott and Ann have never stopped being part of this. They're always willing to answer
+                whatever I throw at them, and with my bourbon nerd mindset, that can be a lot. Scott will dig
+                through spreadsheets to track down a barrel type or a farm location from a single barrel
+                number — no question too small. Ann is the guiding hand that keeps the compass pointed toward
+                the brand.
+              </p>
+              <p>
                 Jay had a massive impact on me. He was real and honest — taught me a lot, and to this day I
                 can still call him or send him a message when I need advice. High Wire was the first distillery
                 that gave me a chance — even though I didn't have any formal industry experience at that point.
