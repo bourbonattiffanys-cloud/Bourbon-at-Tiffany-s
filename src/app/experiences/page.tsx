@@ -9,10 +9,10 @@ const eventGalleries = [
     caption: "A private tasting hosted for Clemson Women's Basketball Head Coach Shawn Poppie",
     images: [
       { src: "/assets/events/clemson-wbb-10-2025-01.JPEG", aspect: "1536/1871" },
-      { src: "/assets/events/clemson-wbb-10-2025-02.JPEG", aspect: "3/4" },
-      { src: "/assets/events/clemson-wbb-10-2025-03.JPEG" },
-      { src: "/assets/events/clemson-wbb-10-2025-04.JPEG" },
-      { src: "/assets/events/clemson-wbb-10-2025-05.JPEG" },
+      { src: "/assets/events/clemson-wbb-10-2025-02.JPEG", aspect: "1606/1958" },
+      { src: "/assets/events/clemson-wbb-10-2025-03.JPEG", aspect: "3/4" },
+      { src: "/assets/events/clemson-wbb-10-2025-04.JPEG", aspect: "3/4" },
+      { src: "/assets/events/clemson-wbb-10-2025-05.JPEG", aspect: "3/4" },
     ],
   },
   {
@@ -25,7 +25,7 @@ const eventGalleries = [
   {
     caption: "A private tasting, August 2023",
     images: [
-      { src: "/assets/events/private-group-8-2023-03.JPEG" },
+      { src: "/assets/events/private-group-8-2023-03.JPEG", aspect: "3/4" },
       { src: "/assets/events/private-group-8-2023-04.JPEG" },
     ],
   },
@@ -33,27 +33,27 @@ const eventGalleries = [
     caption: "A private tasting, September 2023",
     images: [
       { src: "/assets/events/private-group-9-2023-01.JPG" },
-      { src: "/assets/events/private-group-9-2023-02.JPG" },
-      { src: "/assets/events/private-group-9-2023-03.JPG", position: "top left" },
+      { src: "/assets/events/private-group-9-2023-02.JPG", aspect: "3024/3290" },
+      { src: "/assets/events/private-group-9-2023-03.JPG", aspect: "1250/1257", position: "top left" },
     ],
   },
   {
     caption: "A 70th birthday tasting — six bottles selected so their ages added up to exactly seventy, with custom glassware made for the occasion",
-    images: [{ src: "/assets/events/70th-birthday-party-01.JPEG", aspect: "3/4" }],
+    images: [{ src: "/assets/events/70th-birthday-party-01.JPEG", aspect: "1067/1388" }],
   },
   {
     caption: "A private birthday tasting",
     images: [
-      { src: "/assets/events/private-birthday-party-01.jpg" },
-      { src: "/assets/events/private-birthday-party-02.jpg" },
-      { src: "/assets/events/private-birthday-party-03.jpg" },
-      { src: "/assets/events/private-birthday-party-04.jpg" },
-      { src: "/assets/events/private-birthday-party-05.jpg" },
+      { src: "/assets/events/private-birthday-party-01.jpg", aspect: "2048/1366" },
+      { src: "/assets/events/private-birthday-party-02.jpg", aspect: "2048/1366" },
+      { src: "/assets/events/private-birthday-party-03.jpg", aspect: "2048/1366" },
+      { src: "/assets/events/private-birthday-party-04.jpg", aspect: "2048/1345" },
+      { src: "/assets/events/private-birthday-party-05.jpg", aspect: "2048/1556" },
     ],
   },
   {
     caption: "A few more moments from tastings along the way",
-    images: [{ src: "/assets/events/misc-events.JPEG" }],
+    images: [{ src: "/assets/events/misc-events.JPEG", aspect: "2389/2026" }],
   },
 ];
 
