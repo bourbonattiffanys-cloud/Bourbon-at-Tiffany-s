@@ -7,10 +7,10 @@ import { SectionHeading } from "@/components/section-heading";
 import { createMetadata } from "@/lib/site";
 
 const brandPartners = [
-  { name: "High Wire Distilling", domain: "highwiredistilling.com" },
-  { name: "Broad Branch Distillery", domain: "broadbranchdistillery.com" },
-  { name: "ASW Distillery", domain: "aswdistillery.com" },
-  { name: "Driftless Glen", domain: "driftlessglen.com" },
+  { name: "ASW Distillery", logo: "/assets/logos/ASW-Distillery-Southern-Pot-Still.webp" },
+  { name: "Broad Branch Distillery", logo: "/assets/logos/broad-branch.png" },
+  { name: "Driftless Glen", logo: "/assets/logos/driftless-glen-logo.png" },
+  { name: "High Wire Distilling", logo: "/assets/logos/high-wire.avif" },
 ];
 
 const consultingServices = [
@@ -82,14 +82,15 @@ export default function ConsultingPage() {
         </Reveal>
         <div className="consulting-partners__grid">
           {brandPartners.map((brand, index) => (
-            <Reveal key={brand.domain} delay={index * 0.05}>
+            <Reveal key={brand.name} delay={index * 0.05}>
               <div className="consulting-partners__item">
                 <Image
-                  src={`https://www.google.com/s2/favicons?domain=${brand.domain}&sz=128`}
+                  src={brand.logo}
                   alt={`${brand.name} logo`}
-                  width={64}
-                  height={64}
+                  width={120}
+                  height={80}
                   className="consulting-partners__logo"
+                  style={{ objectFit: "contain" }}
                 />
                 <p>{brand.name}</p>
               </div>

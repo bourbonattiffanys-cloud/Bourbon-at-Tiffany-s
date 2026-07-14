@@ -13,18 +13,19 @@ export const socialLinks: SocialLink[] = [
 
 export const faqs = [
   {
-    question: "What does register interest mean?",
+    question: "How do I find out about upcoming picks?",
     answer:
-      "It is a notification list, not a guaranteed bottle reservation. Tiffany uses it to gauge demand and to share where a pick will be available once the retail partner is ready.",
+      "Sign up for notifications for public releases directly on a pick page.",
   },
   {
-    question: "Can people buy bottles directly on this site?",
+    question: "Where can I buy your picks?",
     answer:
-      "Not in this first version. When a pick goes live, the page can link to the retail partner or list the store where the bottle will be available.",
+      "Each pick page lists the retail stores and any online options where the bottle is available. If it shows as available, head to the store — no membership required.",
   },
   {
-    question: "What kind of events can Tiffany lead?",
+    question: "How do I join a pick team?",
     answer:
-      "Private tastings, enthusiast education sessions, bottle-share style experiences, and custom whiskey events for groups or partners.",
+      "That's what The Selection Room is for — a private, invite-only membership launching soon. If you're interested, start a conversation.",
+    answerLink: { text: "start a conversation", href: "/contact" },
   },
 ];

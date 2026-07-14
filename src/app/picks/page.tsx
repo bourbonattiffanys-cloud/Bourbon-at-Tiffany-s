@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { BarrelLogTabs } from "@/components/barrel-log-tabs";
 import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/reveal";
@@ -36,7 +37,7 @@ export default async function PicksPage() {
     <>
       <PageHero
         eyebrow="Barrel Picks"
-        title="Every barrel earned its place because it met a standard, not a deadline."
+        title="Each barrel earned its place because it met a standard, not a deadline."
       />
 
       <div className="shell log-totals-strip">
@@ -72,8 +73,7 @@ export default async function PicksPage() {
         <Reveal>
           <SectionHeading
             eyebrow="Questions"
-            title="How picks work"
-            description="Register interest early, then check back once the release details are confirmed."
+            title="Everything you need to know."
           />
         </Reveal>
         <div className="faq-list">
@@ -81,7 +81,15 @@ export default async function PicksPage() {
             <Reveal key={item.question} delay={index * 0.04}>
               <article className="faq-item">
                 <h3>{item.question}</h3>
-                <p>{item.answer}</p>
+                <p>
+                  {item.answerLink ? (
+                    <>
+                      {item.answer.split(item.answerLink.text)[0]}
+                      <Link href={item.answerLink.href} className="text-link">{item.answerLink.text}</Link>
+                      {item.answer.split(item.answerLink.text)[1]}
+                    </>
+                  ) : item.answer}
+                </p>
               </article>
             </Reveal>
           ))}

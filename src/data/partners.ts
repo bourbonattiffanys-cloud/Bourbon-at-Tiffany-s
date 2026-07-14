@@ -4,6 +4,7 @@ export interface Partner {
   role: string;
   description: string;
   photo: string;
+  photoFit?: "cover" | "contain";
   website?: string;
   projects?: string[];
 }
@@ -15,7 +16,8 @@ export const partners: Partner[] = [
     role: "Custom whiskey accessories",
     description:
       "Ben started as an engraver and fell into the whiskey world the same way a lot of us do — curiosity first, obsession second. That's exactly why he gets it. Barrel Raised does it all — Glencairns, glen toppers, flasks, travel cases, journals — everything customizable with your logo. He can do things you wouldn't think to ask for until you see them, like glasses etched so that when you lift them to pour, the bottom reads 'Dad' or 'Happy Father's Day.' Ben was the first person to put his craft behind what I was building, and every piece that has sat on a table at one of my tastings has his work behind it.",
-    photo: "/assets/partners/barrel-raised-logo.avif",
+    photo: "/assets/partners/barrel-raised.png",
+    photoFit: "contain",
     website: "https://www.barrelraised.com/",
     projects: [
       "Custom glassware for private tastings",
@@ -31,7 +33,7 @@ export const partners: Partner[] = [
     business: "Clayton Hyams Photography",
     role: "Photographer",
     description:
-      "Clayton actually came to me first — he had already been photographing my barrel picks and wanted to tell the story behind them. I was able to connect him with High Wire Distilling to get him the Jimmy Red corn you see in those shots. That's how this works — you show up for people and they show up for you. Clayton is shooting the entire Bourbon at Tiffany's pick collection, and his eye for what makes a bottle mean something is exactly what this brand deserves.",
+      "Clayton was photographing whiskey bottles before we ever met — including my Dettling pick. When I saw his work I reached out to tell him how beautiful it was. He came to meet me in person, and I was able to connect him with High Wire Distilling to get him access to the Jimmy Red corn for those shots you see in his portfolio. I just want to see people succeed. If I can make a connection that helps someone, that's enough for me. Clayton has been shooting the Bourbon at Tiffany's pick collection ever since, and his eye for what makes a bottle mean something is exactly what this brand deserves.",
     photo: "/assets/partners/clayton.jpg",
     website: "https://www.claytonhyamsphotography.com/",
     projects: [
@@ -41,7 +43,7 @@ export const partners: Partner[] = [
     ],
   },
   {
-    name: "HoosierWoodGuy",
+    name: "Rodney Green",
     business: "HoosierWoodGuy",
     role: "Handcrafted bourbon barrel goods",
     description:

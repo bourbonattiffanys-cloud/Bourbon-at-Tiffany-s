@@ -50,7 +50,7 @@ export function ClientProjectCard({ entry }: { entry: ClientProjectEntry }) {
               className="barrel-log-card__logo"
             />
           ) : null}
-          {entry.type ? (
+          {entry.type && entry.type !== "Store" ? (
             <span className={`status-pill${entry.type === "Non-Profit" ? " status-pill--nonprofit" : entry.type === "Club" ? " status-pill--club" : ""}`}>
               {entry.type}
             </span>

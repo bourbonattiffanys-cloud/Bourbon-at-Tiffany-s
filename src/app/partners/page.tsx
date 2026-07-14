@@ -38,7 +38,7 @@ export default function PartnersPage() {
                     alt={partner.name}
                     fill
                     sizes="(max-width: 900px) 100vw, 45vw"
-                    style={{ objectFit: "cover" }}
+                    style={{ objectFit: partner.photoFit ?? "cover" }}
                   />
                 </div>
                 <div className="partner-card__copy editorial-panel">
