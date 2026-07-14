@@ -7,8 +7,8 @@ import { SectionHeading } from "@/components/section-heading";
 import { createMetadata } from "@/lib/site";
 
 const brandPartners = [
-  { name: "ASW Distillery", logo: "/assets/logos/ASW-Distillery-Southern-Pot-Still.webp" },
-  { name: "Broad Branch Distillery", logo: "/assets/logos/broad-branch.png" },
+  { name: "ASW Distillery", logo: "/assets/logos/ASW-Distillery-Southern-Pot-Still-dark.png" },
+  { name: "Broad Branch Distillery", logo: "/assets/logos/Broad-Branch-mark.png" },
   { name: "Driftless Glen", logo: "/assets/logos/driftless-glen-logo.png" },
   { name: "High Wire Distilling", logo: "/assets/logos/high-wire.avif" },
 ];
