@@ -42,7 +42,13 @@ const eventGalleries = [
   },
   {
     caption: "A private birthday tasting",
-    images: [],
+    images: [
+      { src: "/assets/events/private-birthday-party-01.jpg" },
+      { src: "/assets/events/private-birthday-party-02.jpg" },
+      { src: "/assets/events/private-birthday-party-03.jpg" },
+      { src: "/assets/events/private-birthday-party-04.jpg" },
+      { src: "/assets/events/private-birthday-party-05.jpg" },
+    ],
   },
 ];
 
