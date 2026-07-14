@@ -19,8 +19,8 @@ const eventGalleries = [
     caption: "A food and bourbon pairing experience",
     images: [
       { src: "/assets/events/food-bourbon-pairing-01.JPEG" },
-      { src: "/assets/events/food-bourbon-pairing-02.JPEG", position: "top" },
-      { src: "/assets/events/food-bourbon-pairing-03.JPEG" },
+      { src: "/assets/events/food-bourbon-pairing-02.JPEG", aspect: "12/5" },
+      { src: "/assets/events/food-bourbon-pairing-03.JPEG", aspect: "3/4" },
     ],
   },
   {
