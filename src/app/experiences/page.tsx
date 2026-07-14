@@ -49,11 +49,18 @@ const eventGalleries = [
       { src: "/assets/events/private-birthday-party-03.jpg", aspect: "2048/1366" },
       { src: "/assets/events/private-birthday-party-04.jpg", aspect: "2048/1345" },
       { src: "/assets/events/private-birthday-party-05.jpg", aspect: "2048/1556" },
+      { src: "/assets/events/private-birthday-party-06.jpg", aspect: "1575/1366" },
     ],
   },
   {
     caption: "A few more moments from tastings along the way",
-    images: [{ src: "/assets/events/misc-events.JPEG", aspect: "2389/2026" }],
+    images: [
+      { src: "/assets/events/misc-events.JPEG", aspect: "2389/2026" },
+      { src: "/assets/events/misc-events-02-cropped.jpg", aspect: "1179/2099" },
+      { src: "/assets/events/misc-events-03.JPEG", aspect: "2172/1448" },
+      { src: "/assets/events/misc-events-04.jpeg", aspect: "2207/2412" },
+      { src: "/assets/events/misc-events-05.jpg", aspect: "1126/907" },
+    ],
   },
 ];
 
