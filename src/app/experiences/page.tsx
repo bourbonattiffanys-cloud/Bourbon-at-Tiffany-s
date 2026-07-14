@@ -18,8 +18,7 @@ const eventGalleries = [
   {
     caption: "A food and bourbon pairing experience",
     images: [
-      { src: "/assets/events/food-bourbon-pairing-01.JPEG" },
-      { src: "/assets/events/food-bourbon-pairing-02.JPEG", aspect: "12/5" },
+      { src: "/assets/events/food-bourbon-pairing-02.JPEG", aspect: "12/5", span: 2 },
       { src: "/assets/events/food-bourbon-pairing-03.JPEG", aspect: "3/4" },
     ],
   },
@@ -104,7 +103,11 @@ export default function ExperiencesPage() {
           {gallery.images.length > 0 && (
             <div className="event-gallery__grid">
               {gallery.images.map((image, i) => (
-                <Reveal key={image.src} delay={i * 0.05}>
+                <Reveal
+                  key={image.src}
+                  delay={i * 0.05}
+                  style={image.span ? { gridColumn: `span ${image.span}` } : undefined}
+                >
                   <div
                     className="event-gallery__item"
                     style={{ aspectRatio: image.aspect ?? "4/3" }}
