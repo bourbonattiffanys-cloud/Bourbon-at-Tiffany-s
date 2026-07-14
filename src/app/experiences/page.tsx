@@ -8,6 +8,7 @@ const eventGalleries = [
   {
     caption: "A private tasting hosted for Clemson Women's Basketball Head Coach Shawn Poppie",
     images: [
+      { src: "/assets/events/clemson-wbb-10-2025-01.JPEG" },
       { src: "/assets/events/clemson-wbb-10-2025-02.JPEG", aspect: "3/4" },
       { src: "/assets/events/clemson-wbb-10-2025-03.JPEG" },
       { src: "/assets/events/clemson-wbb-10-2025-04.JPEG" },
@@ -19,6 +20,7 @@ const eventGalleries = [
     images: [
       { src: "/assets/events/food-bourbon-pairing-01.JPEG" },
       { src: "/assets/events/food-bourbon-pairing-02.JPEG", position: "top" },
+      { src: "/assets/events/food-bourbon-pairing-03.JPEG" },
     ],
   },
   {
@@ -38,7 +40,7 @@ const eventGalleries = [
   },
   {
     caption: "A 70th birthday tasting — six bottles selected so their ages added up to exactly seventy, with custom glassware made for the occasion",
-    images: [],
+    images: [{ src: "/assets/events/70th-birthday-party-01.JPEG", aspect: "3/4" }],
   },
   {
     caption: "A private birthday tasting",
@@ -49,6 +51,10 @@ const eventGalleries = [
       { src: "/assets/events/private-birthday-party-04.jpg" },
       { src: "/assets/events/private-birthday-party-05.jpg" },
     ],
+  },
+  {
+    caption: "A few more moments from tastings along the way",
+    images: [{ src: "/assets/events/misc-events.JPEG" }],
   },
 ];
 
