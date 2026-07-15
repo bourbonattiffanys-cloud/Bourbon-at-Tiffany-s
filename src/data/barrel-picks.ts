@@ -44,7 +44,7 @@ export const barrelPicks: BarrelPick[] = [
     subtitle: "Caramel apple pie in a glass. Upcoming release, August 2026.",
     status: "announced",
     releaseDate: "2026-08",
-    proof: "139 proof",
+    proof: "TBD",
     mashbill: "100% heritage prairie rye",
     barrelType: "Single barrel rye — Barrel 219",
     tastingNotes: [

@@ -107,7 +107,7 @@ export const myPickLogEntries: BarrelLogEntry[] = [
     logoImage: "/assets/logos/Broad-Branch-mark.png",
     pickDate: "2026-04",
     releaseDate: "2026-08",
-    proof: "139 proof",
+    proof: "TBD",
     mashbill: "100% heritage prairie rye",
     notes: "Barrel 219",
   },
