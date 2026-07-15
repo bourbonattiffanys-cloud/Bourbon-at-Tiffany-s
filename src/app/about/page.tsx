@@ -124,32 +124,35 @@ export default function AboutPage() {
             <div>
               <p>
                 After that, I started consulting for a new NDP out of South Carolina — Alvin Langston. They
-                had been on shelves for about six months at that point, with their Contrary Cow dark chocolate
-                whiskey as the main product. They wanted to do more single barrel business, and I came in to
+                had been on shelves for about six months at that point, with their Contrary Cow Dark Chocolate
+                Whiskey as the main product. They wanted to do more single-barrel business, and I came in to
                 help make that happen.
               </p>
               <p>
-                What started as a five week consulting engagement has grown into an ongoing relationship. I've
-                done several single barrel picks with them, launched the Poppie Collection — a series built in
-                collaboration with Clemson women's basketball coach Shawn Poppie — and launched my own Vault
-                Collection through them as well.
+                What started as a five-week consulting engagement has grown into an ongoing relationship. I've
+                completed several single-barrel picks with them, launched the Poppie Collection — a series
+                built in collaboration with Clemson women's basketball coach Shawn Poppie — and launched my
+                own Vault Collection through them as well.
               </p>
               <p>
                 From there I picked up a contract with Broad Branch Distillery for retail and sales support.
-                This was the moment things shifted — not just in the volume of work, but in what it represented.
-                Brands were reaching out. The reputation I had been quietly building was starting to open doors
-                I hadn&apos;t knocked on. Bourbon at Tiffany&apos;s was becoming exactly what I had hoped it
-                could be.
+                Anna Windham and Natalie Spinosa were my biggest support through that stretch — their
+                encouragement and belief in me gave me the strength to keep pushing toward building something
+                of my own. This was the moment things shifted, not just in the volume of work, but in what it
+                represented. Brands were reaching out. The reputation I had been quietly building was starting
+                to open doors I hadn&apos;t knocked on. Bourbon at Tiffany&apos;s was becoming exactly what I
+                had hoped it could be.
               </p>
             </div>
           </div>
 
           <p>
-            In December we took a trip to Kentucky and Indiana and screened about forty barrels in two
-            days, all with projects for the first half of 2026 in mind. Everything has gone extremely well.
+            In December, I took a trip to Kentucky and Indiana with Jim Nasim and screened about forty
+            barrels in two days, all with projects for the first half of 2026 in mind. Everything has gone
+            extremely well.
           </p>
           <p>
-            Over the last year the business has grown in ways I didn't fully see coming. What started with
+            Over the last year, the business has grown in ways I didn't fully see coming. What started with
             retail support for High Wire has expanded into consulting, sales support, and event representation
             across multiple brands. I don't take any of it for granted, and I feel blessed and excited about
             the growth and what is on the horizon.
