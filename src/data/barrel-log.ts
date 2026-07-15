@@ -186,6 +186,7 @@ export const collabPickLogEntries: BarrelLogEntry[] = [
     bottleCount: 174,
     proof: "118 proof",
     mashbill: "100% Jimmy Red corn",
+    farmLocation: "W.P. Rawls Farm, Pelion, SC",
     availability: "available",
     stores: [{ name: "Morganelli's Party Store", logoImage: "/assets/logos/morganellislogo.jpg" }],
   },
