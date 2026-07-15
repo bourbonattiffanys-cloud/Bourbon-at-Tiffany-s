@@ -65,9 +65,10 @@ export const myPickLogEntries: BarrelLogEntry[] = [
     releaseDate: "2026-03",
     bottleCount: 78,
     proof: "140 proof",
+    whiskyType: "American Light Whiskey",
     mashbill: "99% corn, 1% malted barley",
     availability: "sold-out",
-    notes: "3 weeks from being 21 years old — American Light Whiskey",
+    notes: "3 weeks from being 21 years old",
   },
   {
     id: "alvin-langston-2026-02",
