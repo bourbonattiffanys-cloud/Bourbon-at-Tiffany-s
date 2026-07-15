@@ -48,7 +48,7 @@ export const myPickLogEntries: BarrelLogEntry[] = [
     logoImage: "/assets/logos/Broad-Branch-mark.png",
     pickDate: "2024-07",
     releaseDate: "2024-11",
-    bottleCount: 156,
+    bottleCount: 148,
     proof: "141 proof",
     mashbill: "86% white corn, 6% heritage prairie rye, 8% malted barley",
     availability: "sold-out",
