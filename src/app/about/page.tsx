@@ -65,26 +65,26 @@ export default function AboutPage() {
           <div className="about-story__photo-split">
             <div>
               <p>
-                In the fall of 2023, I was on a barrel pick at High Wire Distilling. I was still finding my
-                footing with the tasting business — I didn't have a huge social media following, but I posted
-                consistently. What I was drinking, reviews, what I was learning. That built a small presence
-                around South Carolina.
+                Late summer of 2023, I was still finding my footing with the tasting business. I didn't have
+                a huge social media following, but I posted consistently — what I was drinking, reviews, what
+                I was learning. That built a small presence around South Carolina. While I was on a barrel
+                pick at High Wire Distilling, I was finally able to meet Scott Blackwell and Ann Marshall, the
+                owners, and Alexander Helms, who was the head distiller at the time.
               </p>
               <p>
-                That day, Scott and Ann asked me about bourbon tastings for retail events. Two or three weeks
-                later I was back at the distillery for their ten year anniversary, and they introduced me to
-                their national sales manager, Jay Liddell.
+                That day, Scott and Ann asked me about hosting tastings for retail events. Two or three weeks
+                later I was back at the distillery for their ten-year anniversary event, and they introduced
+                me to their national sales manager, Jay Liddell, who taught me a lot — I still call him or
+                send him a message when I need advice.
               </p>
               <p>
-                Jay had a massive impact on me. He was real and honest — taught me a lot, and to this day I
-                can still call him or send him a message when I need advice.
-              </p>
-              <p>
-                Scott and Ann have never stopped being part of this. They're always willing to answer
-                whatever I throw at them, and with my bourbon nerd mindset, that can be a lot. Scott will dig
-                through spreadsheets to track down a barrel type or a farm location from a single barrel
-                number — no question too small. Ann is the guiding hand that keeps the compass pointed toward
-                the brand.
+                Scott, Ann, and Alexander have played a pivotal part in my growth in the industry. Ann laid
+                the foundation and helped to set the standards that I run my own tasting company by. She is a
+                guiding hand that keeps the compass positioned on the brand they have built. Scott and
+                Alexander are always willing to answer whatever I throw at them, and with my bourbon nerd
+                mindset, that can be a lot. They will dig through spreadsheets to track down a barrel type or
+                a farm location from a single barrel or batch number — no question too small to satisfy my
+                constant thirst for knowledge around our beautiful Jimmy Red corn.
               </p>
               <p>
                 High Wire was the first distillery that gave me a chance — even though I didn't have any
