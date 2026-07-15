@@ -4,7 +4,14 @@ import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/reveal";
 import { createMetadata, siteConfig } from "@/lib/site";
 
-const eventGalleries = [
+type GalleryImage = {
+  src: string;
+  aspect?: string;
+  position?: string;
+  span?: number;
+};
+
+const eventGalleries: { caption: string; images: GalleryImage[] }[] = [
   {
     caption: "A private tasting hosted for Clemson Women's Basketball Head Coach Shawn Poppie",
     images: [

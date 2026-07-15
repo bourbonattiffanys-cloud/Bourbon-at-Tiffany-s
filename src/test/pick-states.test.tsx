@@ -12,23 +12,24 @@ const findPick = (slug: string) => {
 };
 
 describe("pick card states", () => {
-  it("renders a partial-details announced pick", () => {
-    render(<PickCard pick={findPick("carolina-cask-finish")} />);
+  it("renders an announced pick with a Coming Soon CTA", () => {
+    render(<PickCard pick={findPick("broad-branch-rye-2026")} />);
     expect(screen.getByText(/Coming Soon/i)).toBeInTheDocument();
   });
 
-  it("renders a full-details archived pick", () => {
-    render(<PickCard pick={findPick("lowcountry-rye-2025")} />);
-    expect(screen.getByText(/117.4 proof/i)).toBeInTheDocument();
-    expect(screen.getByText(/168/)).toBeInTheDocument();
+  it("renders a full-details sold-out pick", () => {
+    render(<PickCard pick={findPick("dettling-tiffany-3-2026")} />);
+    expect(screen.getByText(/115\.6 proof/i)).toBeInTheDocument();
+    expect(screen.getByText(/150/)).toBeInTheDocument();
   });
 
-  it("renders an available pick with seller link", () => {
+  it("renders a pick with a seller link", () => {
     render(
       <PickCard
         pick={{
-          ...findPick("main-street-single-barrel"),
+          ...findPick("alvin-langston-vault-rye-2026"),
           ctaMode: "seller-link",
+          sellerName: "Main Street Bottle Shop",
           sellerUrl: "https://example.com/main-street-single-barrel",
         }}
       />,
@@ -39,23 +40,26 @@ describe("pick card states", () => {
     );
   });
 
-  it("renders an available pick with store info only", () => {
-    render(<PickCard pick={findPick("palmetto-store-pick")} />);
+  it("renders a pick with store info only", () => {
+    render(
+      <PickCard
+        pick={{
+          ...findPick("alvin-langston-vault-rye-2026"),
+          storeName: "Palmetto Spirits",
+        }}
+      />,
+    );
     expect(screen.getByText(/Available at Palmetto Spirits/i)).toBeInTheDocument();
   });
 
-  it("renders an interest-open pick", () => {
-    render(<PickCard pick={findPick("chapin-founders-barrel")} />);
+  it("renders a pick with a Register Interest CTA", () => {
+    render(<PickCard pick={{ ...findPick("broad-branch-rye-2026"), status: "interest-open" }} />);
     expect(screen.getByRole("link", { name: /Register Interest/i })).toBeInTheDocument();
   });
 
-  it("groups picks into available, upcoming, and past sections", () => {
-    expect(availablePicks.map((pick) => pick.slug)).toEqual(["main-street-single-barrel", "palmetto-store-pick"]);
-    expect(upcomingPicks.map((pick) => pick.slug)).toEqual(["chapin-founders-barrel", "carolina-cask-finish"]);
-    expect(pastPicks.map((pick) => pick.slug)).toEqual([
-      "lowcountry-rye-2025",
-      "double-oak-private-selection",
-      "savannah-honey-barrel",
-    ]);
+  it("groups picks into available and upcoming sections", () => {
+    expect(availablePicks.map((pick) => pick.slug)).toEqual(["alvin-langston-vault-rye-2026"]);
+    expect(upcomingPicks.map((pick) => pick.slug)).toEqual(["broad-branch-rye-2026"]);
+    expect(pastPicks.map((pick) => pick.slug)).toEqual([]);
   });
 });

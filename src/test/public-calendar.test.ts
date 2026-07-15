@@ -63,6 +63,7 @@ UID:event-2
 DTSTART;VALUE=DATE:20260615
 DTEND;VALUE=DATE:20260616
 SUMMARY:Bourbon Dinner
+LOCATION:Broad Branch Distillery
 DESCRIPTION:First line that folds
  onto the next line.
 END:VEVENT

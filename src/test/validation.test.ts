@@ -6,7 +6,7 @@ describe("validation", () => {
     const result = contactRequestSchema.safeParse({
       name: "Tiffany Fan",
       email: "fan@example.com",
-      interest: "tasting",
+      inquiryType: "tasting",
       message: "We would love to plan a tasting for twelve guests.",
     });
 
@@ -17,7 +17,7 @@ describe("validation", () => {
     const result = contactRequestSchema.safeParse({
       name: "A",
       email: "not-an-email",
-      interest: "tasting",
+      inquiryType: "tasting",
       message: "short",
     });
 
@@ -28,7 +28,7 @@ describe("validation", () => {
     const result = pickInterestRequestSchema.safeParse({
       name: "Collector",
       email: "collector@example.com",
-      pickSlug: "chapin-founders-barrel",
+      pickSlug: "broad-branch-rye-2026",
     });
 
     expect(result.success).toBe(true);

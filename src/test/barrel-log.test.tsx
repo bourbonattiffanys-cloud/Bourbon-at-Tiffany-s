@@ -13,9 +13,9 @@ import {
 describe("barrel log data", () => {
   it("contains public my-pick and collab rows from the supplied log", () => {
     expect(myPickLogEntries).toHaveLength(10);
-    expect(collabPickLogEntries).toHaveLength(7);
+    expect(collabPickLogEntries).toHaveLength(6);
     expect(myPickLogEntries.map((entry) => entry.category)).toEqual(Array(10).fill("my-pick"));
-    expect(collabPickLogEntries.map((entry) => entry.category)).toEqual(Array(7).fill("collab"));
+    expect(collabPickLogEntries.map((entry) => entry.category)).toEqual(Array(6).fill("collab"));
   });
 
   it("formats month-level dates and preserves unknown values", () => {
@@ -25,10 +25,7 @@ describe("barrel log data", () => {
 
   it("sorts by release date first, then pick date", () => {
     expect(sortBarrelLogEntries(myPickLogEntries)[0]?.distillery).toBe("Broad Branch Distillery");
-    expect(upcomingLogEntries.map((entry) => entry.id)).toEqual([
-      "broad-branch-distillery-2026-04",
-      "dettling-2026-05",
-    ]);
+    expect(upcomingLogEntries.map((entry) => entry.id)).toEqual(["broad-branch-distillery-2026-04"]);
   });
 
   it("marks future releases as upcoming", () => {
@@ -42,10 +39,12 @@ describe("barrel log data", () => {
   });
 
   it("renders a compact card with missing values as TBD", () => {
-    render(<BarrelLogCard entry={collabPickLogEntries[0]} />);
+    render(
+      <BarrelLogCard entry={myPickLogEntries.find((entry) => entry.id === "broad-branch-distillery-2026-04")!} />,
+    );
 
-    expect(screen.getByRole("heading", { name: /High Wire Distilling/i })).toBeInTheDocument();
-    expect(screen.getByRole("img", { name: /High Wire Distilling logo/i })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /Broad Branch Distillery/i })).toBeInTheDocument();
+    expect(screen.getByRole("img", { name: /Broad Branch Distillery logo/i })).toBeInTheDocument();
     expect(screen.getAllByText("TBD").length).toBeGreaterThan(0);
   });
 
