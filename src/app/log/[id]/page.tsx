@@ -116,6 +116,7 @@ export default async function LogDetailPage({
               <Spec label="Serial No." value={entry.serialNumber} />
               <Spec label="Cooperage" value={entry.cooperage} />
               <Spec label="Finishing" value={entry.finishingStaves} />
+              <Spec label="Farm" value={entry.farmLocation} />
               {entry.mashbill ? (
                 <div className="spec-card spec-card--wide">
                   <dt>Mashbill</dt>

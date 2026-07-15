@@ -117,6 +117,7 @@ export type BarrelLogEntry = {
   serialNumber?: string;
   cooperage?: string;
   finishingStaves?: string;
+  farmLocation?: string;
   notes?: string;
   stores?: PickStore[];
   availability?: BottleAvailability;

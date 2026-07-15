@@ -79,6 +79,7 @@ export function BarrelLogCard({ entry }: { entry: BarrelLogEntry }) {
         {entry.serialNumber ? <Spec label="Serial No." value={entry.serialNumber} /> : null}
         {entry.cooperage ? <Spec label="Cooperage" value={entry.cooperage} /> : null}
         {entry.finishingStaves ? <Spec label="Finishing" value={entry.finishingStaves} /> : null}
+        {entry.farmLocation ? <Spec label="Farm" value={entry.farmLocation} /> : null}
       </dl>
       {entry.notes ? <p className="barrel-log-card__notes">{entry.notes}</p> : null}
     </article>
