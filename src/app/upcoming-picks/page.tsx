@@ -16,7 +16,7 @@ export default function UpcomingPicksPage() {
       <PageHero
         eyebrow="Upcoming Picks"
         title="Follow the next releases before they hit the shelf."
-        description="This page is designed to hold anticipation, details, and a clean conversion path. Register interest early, then return here when Tiffany updates the partner link or store information."
+        description="Register interest early, and I'll follow up with store details and next steps as each release comes together."
       />
       <section className="shell section">
         <div className="pick-grid">

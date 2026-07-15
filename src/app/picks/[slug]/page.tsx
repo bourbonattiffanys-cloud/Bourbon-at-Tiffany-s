@@ -163,8 +163,8 @@ export default async function PickDetailPage({
               </>
             ) : (
               <p>
-                Register interest early, then return to the page once Tiffany updates where the bottle is
-                available.
+                Register interest below and I'll follow up with where this bottle lands as soon as it's
+                confirmed.
               </p>
             )}
           </div>

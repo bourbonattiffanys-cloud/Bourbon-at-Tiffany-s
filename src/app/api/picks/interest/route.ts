@@ -24,7 +24,7 @@ export async function POST(request: Request) {
     await deliverFormSubmission({ ...parsed.data, pickTitle: pick.title }, "pick-interest");
 
     return NextResponse.json({
-      message: `You are on the list for ${pick.title}. Tiffany can update this page with the partner link or store details when the pick goes live.`,
+      message: `You're on the list for ${pick.title}. We'll follow up with store details and next steps as soon as the release is ready.`,
     });
   } catch {
     return NextResponse.json({ error: "Unable to save your interest right now." }, { status: 500 });
