@@ -125,17 +125,17 @@ export default function AboutPage() {
               <p>
                 After that, I started consulting for a new NDP out of South Carolina — Alvin Langston. They
                 had been on shelves for about six months at that point, with their Contrary Cow Dark Chocolate
-                Whiskey as the main product. They wanted to do more single-barrel business, and I came in to
+                Whiskey as the main product. They wanted to do more single barrel business, and I came in to
                 help make that happen.
               </p>
               <p>
                 What started as a five-week consulting engagement has grown into an ongoing relationship. I've
-                completed several single-barrel picks with them, launched the Poppie Collection — a series
+                completed several single barrel picks with them, launched the Poppie Collection — a series
                 built in collaboration with Clemson women's basketball coach Shawn Poppie — and launched my
                 own Vault Collection through them as well.
               </p>
               <p>
-                From there I picked up a contract with Broad Branch Distillery for retail and sales support.
+                From there, I picked up a contract with Broad Branch Distillery for retail and sales support.
                 Anna Windham and Natalie Spinosa were my biggest support through that stretch — their
                 encouragement and belief in me gave me the strength to keep pushing toward building something
                 of my own. This was the moment things shifted, not just in the volume of work, but in what it
