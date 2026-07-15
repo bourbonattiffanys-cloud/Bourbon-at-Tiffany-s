@@ -71,7 +71,7 @@ export const barrelPicks: BarrelPick[] = [
     releaseDate: "2026-06",
     bottleCount: 150,
     proof: "115.6 proof",
-    mashbill: "6 grain",
+    mashbill: "70% corn, 15% rye, 12% oats, 3% specialty malts",
     barrelType: "Single barrel",
     tastingNotes: ["Molasses", "Chocolate", "Coffee", "Tobacco"],
     tiffanyNotes:
