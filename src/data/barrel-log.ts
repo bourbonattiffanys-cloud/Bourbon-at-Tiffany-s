@@ -293,7 +293,7 @@ export const clientProjectEntries: ClientProjectEntry[] = [
     id: "asw-2026-05",
     client: "ASW Distillery",
     collectionName: "Georgia Heartwood Triple Oaked",
-    image: "/assets/barrel-picks/soda-boyz-asw-georgia-heartwood.jpg",
+    image: "/assets/barrel-picks/soda-boyz-asw-georgia-heartwood.png",
     type: "Club",
     logoImages: ["/assets/logos/TheSodaBoyzTRANSPARENT02.png"],
     pickDate: "2026-05",
