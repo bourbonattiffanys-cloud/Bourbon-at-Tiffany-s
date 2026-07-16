@@ -30,13 +30,6 @@ const eventGalleries: { caption: string; images: GalleryImage[] }[] = [
     ],
   },
   {
-    caption: "A private tasting, August 2023",
-    images: [
-      { src: "/assets/events/private-group-8-2023-03.JPEG", aspect: "3/4" },
-      { src: "/assets/events/private-group-8-2023-04.JPEG" },
-    ],
-  },
-  {
     caption: "A 70th birthday tasting — six bottles selected so their ages added up to exactly seventy, with custom glassware made for the occasion",
     images: [
       { src: "/assets/events/70th-birthday-party-04.jpg", aspect: "1172/2101" },
@@ -63,6 +56,13 @@ const eventGalleries: { caption: string; images: GalleryImage[] }[] = [
       { src: "/assets/events/private-group-9-2023-01.JPG" },
       { src: "/assets/events/private-group-9-2023-02.JPG", aspect: "3024/3290" },
       { src: "/assets/events/private-group-9-2023-03.JPG", aspect: "1250/1257", position: "top left" },
+    ],
+  },
+  {
+    caption: "A private tasting, August 2023",
+    images: [
+      { src: "/assets/events/private-group-8-2023-03.JPEG", aspect: "3/4" },
+      { src: "/assets/events/private-group-8-2023-04.JPEG" },
     ],
   },
   {
