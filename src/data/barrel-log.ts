@@ -393,6 +393,7 @@ export const clientProjectEntries: ClientProjectEntry[] = [
     client: "Micky Finn's",
     distillery: "OZ Tyler",
     type: "Store",
+    image: "/assets/barrel-picks/micky-finns-vp.jpeg",
     logoDomain: "mickyfinns.com",
     releaseDate: "2026-06",
     age: "7 years",
