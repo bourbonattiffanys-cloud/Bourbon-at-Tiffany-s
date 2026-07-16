@@ -37,7 +37,7 @@ export function ConsultingForm() {
         throw new Error(payload.error ?? "Something went wrong.");
       }
 
-      setStatus({ type: "success", message: payload.message ?? "Thank you. Tiffany will be in touch soon." });
+      setStatus({ type: "success", message: payload.message ?? "Thank you. I'll be in touch soon." });
       setFormData(initialState);
     } catch (error) {
       setStatus({
