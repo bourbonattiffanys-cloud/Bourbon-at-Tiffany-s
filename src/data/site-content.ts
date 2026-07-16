@@ -15,7 +15,7 @@ export const faqs = [
   {
     question: "How do I find out about upcoming picks?",
     answer:
-      "Sign up for notifications for public releases directly on a pick page.",
+      "Each upcoming pick gets its own page with a quick sign-up form — visit that pick, register your interest there, and I'll follow up with details as soon as it's ready.",
   },
   {
     question: "Where can I buy your picks?",
