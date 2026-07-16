@@ -134,7 +134,7 @@ export const myPickLogEntries: BarrelLogEntry[] = [
     category: "my-pick",
     distillery: "Dettling",
     series: "Tiffany 2",
-    image: "/assets/barrel-picks/Dettling-Tiffany-2.jpg",
+    image: "/assets/barrel-picks/dettling-tiffany-2.jpg",
     logoDomain: "dettling1867.com",
     pickDate: "2024-09",
     releaseDate: "2025-01",
