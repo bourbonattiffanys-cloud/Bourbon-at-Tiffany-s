@@ -68,7 +68,7 @@ export const myPickLogEntries: BarrelLogEntry[] = [
     whiskyType: "American Light Whiskey",
     mashbill: "99% corn, 1% malted barley",
     availability: "sold-out",
-    notes: "3 weeks from being 21 years old",
+    notes: "3 weeks from being 21 years old. Distilled at MGP.",
   },
   {
     id: "alvin-langston-2026-02",
@@ -143,7 +143,7 @@ export const myPickLogEntries: BarrelLogEntry[] = [
     age: "52 months",
     mashbill: "70% corn, 15% rye, 12% oats, 3% specialty malts",
     availability: "sold-out",
-    notes: "Barrel 496 — Spiral Cut",
+    notes: "Barrel 496 — ISC Spiral Cut",
   },
 ];
 
@@ -292,6 +292,7 @@ export const clientProjectEntries: ClientProjectEntry[] = [
   {
     id: "asw-2026-05",
     client: "ASW Distillery",
+    collectionName: "Georgia Heartwood Triple Oaked",
     type: "Club",
     logoImages: ["/assets/logos/TheSodaBoyzTRANSPARENT02.png"],
     pickDate: "2026-05",
