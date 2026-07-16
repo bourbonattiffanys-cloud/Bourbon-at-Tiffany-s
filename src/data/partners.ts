@@ -35,7 +35,7 @@ export const partners: Partner[] = [
     description:
       "Clayton was photographing whiskey bottles before we ever met — including my Dettling pick. When I saw his work I reached out to tell him how beautiful it was. He came to meet me in person, and I was able to connect him with High Wire Distilling to get him access to the Jimmy Red corn for those shots you see in his portfolio. I just want to see people succeed. If I can make a connection that helps someone, that's enough for me. Clayton has been shooting the Bourbon at Tiffany's pick collection ever since, and his eye for what makes a bottle mean something is exactly what this brand deserves.",
     photo: "/assets/partners/clayton.jpg",
-    website: "https://www.claytonhyamsphotography.com/",
+    website: "https://www.instagram.com/mashandstaves",
     projects: [
       "Broad Branch Big Winston bottle photography",
       "Jimmy Red — High Wire Distilling",
