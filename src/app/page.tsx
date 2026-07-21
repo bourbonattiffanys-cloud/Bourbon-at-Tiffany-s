@@ -29,7 +29,7 @@ export default function HomePage() {
               <Link className="button" href="/contact">
                 Plan a tasting
               </Link>
-              <Link className="button button--secondary" href="/picks">
+              <Link className="text-link" href="/picks">
                 Explore picks
               </Link>
             </div>
@@ -131,13 +131,15 @@ export default function HomePage() {
         <div className="quote-grid">
           {testimonials.map((testimonial, index) => (
             <Reveal key={testimonial.name} delay={index * 0.06}>
-              <blockquote className="quote-card">
-                <p>{testimonial.quote}</p>
+              <article className="quote-card">
+                <blockquote>
+                  <p>{testimonial.quote}</p>
+                </blockquote>
                 <footer>
                   <strong>{testimonial.name}</strong>
                   <span>{testimonial.role}</span>
                 </footer>
-              </blockquote>
+              </article>
             </Reveal>
           ))}
         </div>

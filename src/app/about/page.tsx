@@ -14,7 +14,7 @@ export default function AboutPage() {
     <>
       <PageHero
         eyebrow="About Tiffany"
-        title="Taste matters. Find yours."
+        title="I didn't plan any of this."
         description="The story behind Bourbon at Tiffany's — from a bored July to barrel picks, retail tastings, and a business built on genuine curiosity."
       />
 

@@ -2,12 +2,11 @@
 
 import { useState } from "react";
 
-type InquiryType = "tasting" | "picks" | "consulting";
+type InquiryType = "tasting" | "picks";
 
 const inquiryOptions: { value: InquiryType; label: string }[] = [
   { value: "tasting", label: "Private tasting or event" },
   { value: "picks", label: "Barrel pick notifications" },
-  { value: "consulting", label: "Brand consulting" },
 ];
 
 type Status =
@@ -23,7 +22,6 @@ export function ContactForm() {
   const [date, setDate] = useState("");
   const [groupSize, setGroupSize] = useState("");
   const [occasion, setOccasion] = useState("");
-  const [company, setCompany] = useState("");
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState<Status>({ type: "idle" });
   const [submitting, setSubmitting] = useState(false);
@@ -41,9 +39,7 @@ export function ContactForm() {
     const payload =
       inquiryType === "tasting"
         ? { inquiryType, name, email, phone, date, groupSize, occasion, message }
-        : inquiryType === "picks"
-          ? { inquiryType, name, email }
-          : { inquiryType, name, email, company, message };
+        : { inquiryType, name, email };
 
     try {
       const response = await fetch("/api/contact", {
@@ -72,7 +68,6 @@ export function ContactForm() {
       setDate("");
       setGroupSize("");
       setOccasion("");
-      setCompany("");
       setMessage("");
     } catch (error) {
       setStatus({
@@ -111,18 +106,7 @@ export function ContactForm() {
           <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} name="email" required />
         </label>
 
-        {inquiryType === "consulting" ? (
-          <>
-            <label>
-              Brand or company
-              <input value={company} onChange={(e) => setCompany(e.target.value)} name="company" required />
-            </label>
-            <label className="form-grid__full">
-              What are you working on?
-              <textarea rows={6} value={message} onChange={(e) => setMessage(e.target.value)} name="message" required />
-            </label>
-          </>
-        ) : inquiryType === "tasting" ? (
+        {inquiryType === "tasting" ? (
           <>
             <label>
               Phone

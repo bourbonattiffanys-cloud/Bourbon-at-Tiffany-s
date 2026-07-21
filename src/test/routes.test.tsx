@@ -23,7 +23,7 @@ describe("route smoke tests", () => {
 
   it("renders the about page", () => {
     render(<AboutPage />);
-    expect(screen.getByRole("heading", { name: /Taste matters\. Find yours\./i })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /I didn't plan any of this\./i })).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: /Consistency gets noticed/i })).toBeInTheDocument();
   });
 

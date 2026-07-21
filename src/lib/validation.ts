@@ -17,11 +17,6 @@ export const contactRequestSchema = z.discriminatedUnion("inquiryType", [
   contactBase.extend({
     inquiryType: z.literal("picks"),
   }),
-  contactBase.extend({
-    inquiryType: z.literal("consulting"),
-    company: z.string().trim().min(2, "Please share the brand or company name."),
-    message: z.string().trim().min(12, "Please share a few more details."),
-  }),
 ]);
 
 export const consultingRequestSchema = z.object({

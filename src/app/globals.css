@@ -193,6 +193,42 @@ span {
   color: #fff;
 }
 
+.site-header__toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid rgba(255, 230, 205, 0.25);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  cursor: pointer;
+}
+
+.site-header__toggle-bar {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #f9eedf;
+  border-radius: 2px;
+  transition: transform 220ms ease, opacity 220ms ease;
+}
+
+.site-header__toggle[aria-expanded="true"] .site-header__toggle-bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.site-header__toggle[aria-expanded="true"] .site-header__toggle-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.site-header__toggle[aria-expanded="true"] .site-header__toggle-bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
 .button {
   display: inline-flex;
   align-items: center;
@@ -311,7 +347,8 @@ span {
 .hero__actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.9rem;
+  align-items: center;
+  gap: 1.4rem;
   margin-top: 1.9rem;
 }
 
@@ -829,7 +866,7 @@ span {
   margin-bottom: 0.75rem;
 }
 
-.about-story__body h2:first-child {
+.about-story__body > div:first-child > h2 {
   margin-top: 0;
 }
 
@@ -1297,6 +1334,10 @@ span {
   box-shadow: none;
 }
 
+.quote-card blockquote {
+  margin: 0;
+}
+
 .quote-card footer {
   display: grid;
   gap: 0.16rem;
@@ -1632,6 +1673,40 @@ a:focus-visible {
 }
 
 @media (max-width: 760px) {
+  .site-header__inner {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+
+  .site-header__toggle {
+    display: inline-flex;
+  }
+
+  .site-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0.5rem 0 1rem;
+    background: rgba(25, 16, 12, 0.97);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 230, 205, 0.1);
+  }
+
+  .site-nav--open {
+    display: flex;
+  }
+
+  .site-nav a {
+    padding: 0.85rem 1.2rem;
+    border-top: 1px solid rgba(255, 230, 205, 0.08);
+    font-size: 1.05rem;
+  }
+
   .section,
   .site-footer {
     padding: 4.1rem 0;

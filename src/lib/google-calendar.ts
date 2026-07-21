@@ -1,6 +1,6 @@
 import type { ScheduleItem, ScheduleKind } from "@/lib/types";
 
-export const CALENDAR_REVALIDATE_SECONDS = 21_600;
+export const CALENDAR_REVALIDATE_SECONDS = 3_600;
 
 type GoogleCalendarDate = {
   date?: string;

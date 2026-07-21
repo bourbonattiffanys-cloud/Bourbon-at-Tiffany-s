@@ -71,7 +71,7 @@ export function PickCard({ pick }: { pick: BarrelPick }) {
         </dl>
         <div className="pick-card__actions">
           <PickCta pick={pick} className="button button--small" />
-          <Link className="text-link" href={`/picks/${pick.slug}`}>
+          <Link className="text-link" href={`/picks/${pick.slug}`} aria-label={`View details for ${pick.title}`}>
             View details
           </Link>
         </div>
